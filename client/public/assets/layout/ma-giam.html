@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Voucher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #242424;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .btn {
+            padding: 8px 12px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn-add {
+            background-color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .btn-edit {
+            background-color: #25be07;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý Voucher</h1>
+        <a href="#" class="btn btn-add">Thêm Voucher</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Voucher</th>
+                    <th>Mã Voucher</th>
+                    <th>Giảm Giá (%)</th>
+                    <th>Ngày Bắt Đầu</th>
+                    <th>Ngày Kết Thúc</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dữ liệu mẫu -->
+                <tr>
+                    <td>1</td>
+                    <td>Giảm giá 10%</td>
+                    <td>SALE10</td>
+                    <td>10</td>
+                    <td>2024-11-01</td>
+                    <td>2024-12-31</td>
+                    <td>
+                        <a href="#" class="btn btn-edit">Sửa</a>
+                        <a href="#" class="btn btn-delete">Xóa</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Giảm giá 20%</td>
+                    <td>SALE20</td>
+                    <td>20</td>
+                    <td>2024-11-15</td>
+                    <td>2024-12-15</td>
+                    <td>
+                        <a href="#" class="btn btn-edit">Sửa</a>
+                        <a href="#" class="btn btn-delete">Xóa</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

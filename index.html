@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="layout_matkinh/public/css/cssHome.css">
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="/view/layout_user/page_home.html"> <img src="/layout_matkinh/public/img/Sunny.png" alt="Anna Logo" class="logo"></a>
+
+        <div class="user-menu">
+            <ul><a href="/view/layout_user/product.html">Sản Phẩm</a></ul>
+            <ul class="user-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-items">
+                        <li class="dropdown-item">Gọng Kính</li>
+                        <li>Tròng Kính</li>
+                        <li>Kính Râm</li>
+                        <li>Kính Trẻ Em</li>
+                    </div>
+                    <div class="dropdown-details">
+                        <div>
+                            <strong>CHẤT LIỆU</strong>
+                            <p>Kim Loại</p>
+                            <p>Nhựa</p>
+                        </div>
+                        <div>
+                            <strong>HÌNH DÁNG</strong>
+                            <p>Mắt mèo</p>
+                            <p>Vuông</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-image">
+                        <img src="/layout_matkinh/public/img/blog.png" alt="Dropdown Image">
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="keyword" autocomplete="off" placeholder="Tìm gọng kính, kính râm..." />
+            <i class="fas fa-search"></i>
+            <div id="result-list">
+                <ul>
+                    <!-- Kết quả tìm kiếm sẽ được thêm ở đây -->
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- Navigation -->
+        <nav>
+            <ul id="menu">
+                <li><a href="/view/layout_user/page_about.html">Giới Thiệu</a></li>
+                <li><a href="/view/layout_user/page_blog.html">Bài Viết</a></li>
+                <li><a href="/view/layout_user/page_contact.html">Liên Hệ</a></li>
+                <li><a href="/view/layout_user/user_login.html">Đăng Nhập</a></li>
+                <li><a href="/view/layout_user/user_register.html">Đăng Kí</a></li>
+                <li><a href="/view/layout_user/user_profile.html">Tài Khoản</a></li>
+
+            </ul>
+        </nav>
+        <div class="cart-container">
+            <a href="/view/layout_user/page_cart.html">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <span id="cart-count" class="cart-count">1</span>
+            <!-- Dropdown menu for cart -->
+            <div class="cart-dropdown" id="cart-dropdown">
+                <ul id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                    <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                    <span class="cart-item-name">GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</span>
+                        <span class="cart-item-subtotal">Màu: đen</span>
+                    <div class="cart-item-details">
+                        <span class="cart-item-quantity">Số lượng: 1</span>
+                        <span class="cart-item-subtotal">Tổng phụ: 900.000₫</span>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                </ul>
+                <ul id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                    <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                    <span class="cart-item-name">Gọng kính</span>
+                        <span class="cart-item-subtotal">Màu: đen</span>
+                    <div class="cart-item-details">
+                        <span class="cart-item-quantity">Số lượng: 1</span>
+                        <span class="cart-item-subtotal">Tổng phụ: 900.000₫</span>
+                    </div>
+                </ul>
+                <div class="cart-total">
+                    <span>Tổng Tiền: <strong id="cart-total">900.000</strong></span>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Main Content with Image -->
+    <div class="content">
+        <img src="/layout_matkinh/public/img/image.png" alt="Main Image" class="main-image">
+    </div>
+    <h1>Sản Phẩm Giảm Giá</h1>
+
+    <!-- Carousel with Products -->
+    <div class="carousel-container">
+        <span class="arrow left" onclick="moveCarousel(-1)">&#8592;</span> <!-- Mũi tên trái -->
+        <div class="carousel">
+            <div class="product">
+                <a href="/view/layout_user/page_detail.html"><img src="/layout_matkinh/public/img/ghi-3.jpeg" alt=""></a>
+                
+                <div class="content-product">
+                     <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+            <div class="product">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                </a>
+                <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tam giác -->
+                    <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                    <!-- Thêm chữ SALE -->
+                    <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                        transform="rotate(-45, 30, 30)">
+                        90%
+                    </text>
+                </svg>
+
+            </div>
+        </div>
+        <span class="arrow right" onclick="moveCarousel(1)">&#8594;</span> <!-- Mũi tên phải -->
+    </div>
+
+    <div class="collection">
+        <div class="collection-item">
+            <img src="/layout_matkinh/public/img/Untitled-2-04.png" alt="Mẫu gọng kính">
+        </div>
+        <div class="collection-item">
+            <img src="/layout_matkinh/public/img/banner-small-03.png" alt="Nhân viên cửa hàng">
+        </div>
+    </div>
+    <div class="collection-navigation">
+
+        <div class="nav-links">
+            <h2>BỘ SƯU TẬP MỚI NHẤT</h2>
+            <a href="#">GỌNG KÍNH</a>
+            <a href="#">TRÒNG KÍNH</a>
+            <a href="#">KÍNH RÂM</a>
+            <a href="#">KÍNH ÁP TRÒNG</a>
+            <a href="#">XEM TẤT CẢ</a>
+        </div>
+
+    </div>
+    <div class="product-list">
+        <div class="products">
+            <a href="/view/layout_user/page_detail.html">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="Product Image">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </a>
+            <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tam giác -->
+                <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                <!-- Thêm chữ SALE -->
+                <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                    transform="rotate(-45, 30, 30)">
+                    90%
+                </text>
+            </svg>
+        </div>
+        <div class="products">
+            <a href="/view/layout_user/page_detail.html">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="Product Image">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </a>
+            <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tam giác -->
+                <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                <!-- Thêm chữ SALE -->
+                <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                    transform="rotate(-45, 30, 30)">
+                    90%
+                </text>
+            </svg>
+        </div>
+        <div class="products">
+            <a href="/view/layout_user/page_detail.html">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="Product Image">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </a>
+            <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tam giác -->
+                <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                <!-- Thêm chữ SALE -->
+                <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                    transform="rotate(-45, 30, 30)">
+                    90%
+                </text>
+            </svg>
+        </div>
+        <div class="products">
+            <a href="/view/layout_user/page_detail.html">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="Product Image">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </a>
+            <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tam giác -->
+                <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                <!-- Thêm chữ SALE -->
+                <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                    transform="rotate(-45, 30, 30)">
+                    90%
+                </text>
+            </svg>
+        </div>
+        <div class="products">
+            <a href="/view/layout_user/page_detail.html">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="Product Image">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </a>
+            <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tam giác -->
+                <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                <!-- Thêm chữ SALE -->
+                <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                    transform="rotate(-45, 30, 30)">
+                    90%
+                </text>
+            </svg>
+        </div>
+        <div class="products">
+            <a href="/view/layout_user/page_detail.html">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="Product Image">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </a>
+            <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tam giác -->
+                <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                <!-- Thêm chữ SALE -->
+                <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                    transform="rotate(-45, 30, 30)">
+                    90%
+                </text>
+            </svg>
+        </div>
+        <div class="products">
+            <a href="/view/layout_user/page_detail.html">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="Product Image">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </a>
+            <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tam giác -->
+                <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                <!-- Thêm chữ SALE -->
+                <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                    transform="rotate(-45, 30, 30)">
+                    90%
+                </text>
+            </svg>
+        </div>
+        <div class="products">
+            <a href="/view/layout_user/page_detail.html">
+                <img src="/layout_matkinh/public/img/ghi-3.jpeg" alt="Product Image">
+                <div class="content-product">
+                    <h3>GK. GỌNG NHỰA CỨNG AN081 (54.17.146)</h3>
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle plus">+2</div>
+                    </div>
+                    <button>
+                        1.000.000 VNĐ <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </a>
+            <svg class="sale" width="150" height="150" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tam giác -->
+                <path d="M 0 0 L 100 0 Q 10 30 0 100 Z" fill="red" />
+
+                <!-- Thêm chữ SALE -->
+                <text x="15" y="30" fill="white" font-size="15" font-family="Arial" font-weight="bold"
+                    transform="rotate(-45, 30, 30)">
+                    90%
+                </text>
+            </svg>
+        </div>
+    </div>
+
+
+
+    <div class="tick">
+        <input type="text">
+        <h2>xem thêm gọng kính</h2>
+        <i class="fa-solid fa-square-plus"></i>
+    </div>
+    <div class="chinhsach">
+        <hr>
+        <div class="baohanh">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Bảo hành trọn đời</h3>
+        </div>
+        <div class="baohanh">
+            <i class="fa-solid fa-calendar-alt"></i>
+            <h3>Đo mắt miễn phí</h3>
+        </div>
+        <div class="baohanh">
+            <i class="fa-solid fa-lock"></i>
+            <h2>Thu cũ đổi mới</h2>
+        </div>
+        <div class="baohanh">
+            <i class="fa-solid fa-tag"></i>
+            <h2>Vệ sinh và bảo quản kính</h2>
+            <hr>
+        </div>
+        <hr>
+    </div>
+    <h1>CHỌN KÍNH PHÙ HỢP VỚI BẠN</h1>
+    <div class="chonkinh">
+
+        <div class="anh">
+            <img src="/layout_matkinh/public/img/kecu.jpg" alt="">
+        </div>
+        <div class="chonbenphai">
+            <div class="chon">
+                <h2>
+                    CHỌN KÍNH THEO KHUÔN MẶT
+                </h2>
+                <h3> lựa chọn kính theo hình dạng khuôn mặt và sở thích cá nhân của bạn</h3>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="chon">
+
+                <h2>
+                    CHỌN KÍNH THEO PHONG CÁCH
+                </h2>
+                <h3> lựa chọn kính theo hình dạng khuôn mặt và sở thích cá nhân của bạn</h3>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="chon">
+                <h2>
+                    CHỌN KÍNH THEO CÔNG VIỆC
+                </h2>
+                <h3> lựa chọn kính theo hình dạng khuôn mặt và sở thích cá nhân của bạn</h3>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="social-section">
+        <h1 class="h1">The Light</h1>
+        <p class="p">HÃY FOLLOW ĐỂ THEO DÕI CHÚNG MÌNH NGAY TỪ HÔM NAY NHA...</p>
+        <div class="social-scroll" id="scroll-container">
+            <div class="social-item">
+                <div class="social-item-left">
+                    <h2>Hành trình tử tế</h2>
+                    <h3>Chúng mình là kính mắt Anna, kính mắt của sự tử tế.</h3>
+                </div>
+                <div class="social-item-right">
+                    <img src="/layout_matkinh/public/img/kecu.jpg" alt="Instagram">
+                    <h2>Instagram</h2>
+                    <p>@thelight</p>
+                    <button class="explore-btn">KHÁM PHÁ <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="social-item">
+                <div class="social-item-left">
+                    <h2>Hành trình tử tế</h2>
+                    <h3>Chúng mình là kính mắt Anna, kính mắt của sự tử tế.</h3>
+                </div>
+                <div class="social-item-right">
+                    <img src="/layout_matkinh/public/img/vanh.jpeg" alt="Instagram">
+                    <h2>Instagram</h2>
+                    <p>@thelight</p>
+                    <button class="explore-btn">KHÁM PHÁ <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="social-item">
+                <div class="social-item-left">
+                    <h2>Hành trình tử tế</h2>
+                    <h3>Chúng mình là kính mắt Anna, kính mắt của sự tử tế.</h3>
+                </div>
+                <div class="social-item-right">
+                    <img src="/layout_matkinh/public/img/bannipham.png" alt="Instagram">
+                    <h2>Instagram</h2>
+                    <p>@thelight</p>
+                    <button class="explore-btn">KHÁM PHÁ <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="social-item">
+                <div class="social-item-left">
+                    <h2>Hành trình tử tế</h2>
+                    <h3>Chúng mình là kính mắt Anna, kính mắt của sự tử tế.</h3>
+                </div>
+                <div class="social-item-right">
+                    <img src="/layout_matkinh/public/img/khanhhuyenh.jpeg" alt="Instagram">
+                    <h2>Instagram</h2>
+                    <p>@thelight</p>
+                    <button class="explore-btn">KHÁM PHÁ <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-section">
+        <div class="blog-header">
+            <h1>BLOG & CHIA SẺ CỦA THE LIGHT</h1>
+            <button class="view-all">XEM TẤT CẢ <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="blog-cards">
+            <div class="blog-card">
+                <img src="/layout_matkinh/public/img/kecu.jpg" alt="Blog 1">
+                <h2>Top 99+ món quà sinh nhật cho nam ý nghĩa, thiết thực nhất</h2>
+                <p>Blog / Ngày 10/15/2024</p>
+                <a href="#">ĐỌC TIẾP <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="blog-card">
+                <img src="/layout_matkinh/public/img/anhdep.jpg" alt="Blog 2">
+                <h2>Giải đáp: Nhỏ thuốc nhỏ mắt nhiều có tốt không</h2>
+                <p>Blog / Ngày 09/23/2024</p>
+                <a href="#">ĐỌC TIẾP <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="blog-card">
+                <img src="/layout_matkinh/public/img/anh8.jpg" alt="Blog 3">
+                <h2>So sánh kính kính hoya và chemi: Nên mua loại nào?</h2>
+                <p>Blog / Ngày 09/15/2024</p>
+                <a href="#">ĐỌC TIẾP <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="blog-card">
+                <img src="/layout_matkinh/public/img/anh10.jpg" alt="Blog 3">
+                <h2>So sánh kính kính hoya và chemi: Nên mua loại nào?</h2>
+                <p>Blog / Ngày 09/15/2024</p>
+                <a href="#">ĐỌC TIẾP <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/layout_matkinh/public/img/Sunny.png" alt="Anna Logo">
+                <p>Đăng kí để nhận tin mới nhất</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Để lại email của bạn">
+                    <button type="submit">
+                        <span>&#10148;</span>
+                    </button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61556331095513&mibextid=LQQJ4d"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@baolc05?_t=8rIjAAygdkO&_r=1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/_lcb.28th08/profilecard/?igsh=YjJnaGhxeDUzdDZy"><i
+                            class="fab fa-tiktok"></i></a>
+
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>SẢN PHẨM</h4>
+                    <ul>
+                        <li><a href="#">The Titan</a></li>
+                        <li><a href="#">Gọng Kính</a></li>
+                        <li><a href="#">Tròng Kính</a></li>
+                        <li><a href="#">Kính râm</a></li>
+                        <li><a href="#">Kính râm trẻ em</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>THÔNG TIN LIÊN HỆ</h4>
+                    <p>0338538293</p>
+                    <p><a href="mailto:thelight@gmail.com">thelight@gmai.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>CHÍNH SÁCH MUA HÀNG</h4>
+                    <ul>
+                        <li><a href="#">Hình thức thanh toán</a></li>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>THELIGHT © 2018 - 2023. Design by OKHUB Viet Nam</p>
+        </div>
+    </footer>
+
+</body>
+
+<script src="/layout_matkinh/public/js/homemess.js"></script>
+<script type="module" src="/projeck/routes/index.js"></script>
+</html>

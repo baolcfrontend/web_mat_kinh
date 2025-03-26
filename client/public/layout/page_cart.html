@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="/public/css/cssHome.css">
+    <link rel="stylesheet" href="/public/css/csslogin.css">
+    <link rel="stylesheet" href="/public/css/csscart.css">
+    <link rel="stylesheet" href="/public/css/csschitietsp.css">
+    <style>
+        .cart-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 300px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+.cart-dropdown.hidden {
+  display: none;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.cart-footer {
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #f1f1f1;
+}
+
+.cart-footer .view-cart-button {
+  text-decoration: none;
+  color: white;
+  background: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.cart-footer .view-cart-button:hover {
+  background: #0056b3;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="?page/home"> <img src="/public/img/Sunny.png" alt="Anna Logo" class="logo"></a>
+
+        <div class="user-options">
+            <!-- Product Dropdown -->
+            <div class="user-menu">
+                <ul> Sản phẩm</ul>
+                <ul class="user-dropdown">
+                    <li>Gọng Kính</li>
+                    <li>Kính Râm</li>
+                    <li>Kính Trẻ em</li>
+                </ul>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="search" placeholder="tìm gọng kính, kính râm...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="">Giới Thiệu</a></li>
+                <li><a href="">Bài Viết</a></li>
+                <li><a href="?page/contact">Liên Hệ</a></li>
+                <li><a href="?page/user">Đăng Nhập</a></li>
+                <li><a href="">Đăng Kí</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Cart Icon -->
+       <div class="cart-container">
+  <a href="page/cart">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count">0</span>
+  </a>
+  <div class="cart-dropdown hidden">
+    <ul class="cart-items">
+      
+    </ul>
+    <div class="cart-footer">
+      <a href="?page/cart" class="view-cart-button">Xem giỏ hàng</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+    </header>
+  
+<div class="content">
+        <img src="/public/img/bg-banner-blog.jpeg" alt="Main Image" class="main-image">
+   </div>
+     <h1>Giỏ Hàng</h1>
+    <div class="step-indicator">
+        <span>1</span> Giỏ hàng
+        <span class="active">2</span> Thanh toán
+        <span class="active">3</span> Hoàn thành
+    </div>
+
+    <div class="cart-container">
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tạm tính</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>
+                        <div class="product-cart">
+                            <img src="/public/img/ghi-4.jpeg" alt="Áo polo nam">
+                            <a href="#" class="product-name">KR. KÍNH RÂM MÈO AN22TR2227 (54.18.151)
+                               <p class="color"> Màu sắc: Đen Full</p></a>
+                            
+                        </div>
+                    </td>
+                    <td class="price">299000</td>
+                    <td>
+                        <div class="quantity-control">
+                            <button onclick="updateQuantity(this, -1)">-</button>
+                            <input type="text" value="1" class="quantity" onchange="calculateSubtotal(this)">
+                            <button onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </td>
+                    <td class="subtotal">299000</td>
+                    <td><button class="remove-button"><i class="fa-solid fa-trash-can"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="summary">
+            <h3>Cộng giỏ hàng</h3>
+            <p class="color">Tạm tính <span class="total">299000</span> ₫</p>
+            <p class="color">Tổng <span class="total">299000</span> ₫</p>
+            <a href="#" class="checkout-button">Tiến hành thanh toán</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/public/img/Sunny.png" alt="Anna Logo">
+                <p>Đăng kí để nhận tin mới nhất</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Để lại email của bạn">
+                    <button type="submit">
+                        <span>&#10148;</span>
+                    </button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61556331095513&mibextid=LQQJ4d"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@baolc05?_t=8rIjAAygdkO&_r=1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/_lcb.28th08/profilecard/?igsh=YjJnaGhxeDUzdDZy"><i
+                            class="fab fa-tiktok"></i></a>
+
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>SẢN PHẨM</h4>
+                    <ul>
+                        <li><a href="#">The Titan</a></li>
+                        <li><a href="#">Gọng Kính</a></li>
+                        <li><a href="#">Tròng Kính</a></li>
+                        <li><a href="#">Kính râm</a></li>
+                        <li><a href="#">Kính râm trẻ em</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>THÔNG TIN LIÊN HỆ</h4>
+                    <p>0338538293</p>
+                    <p><a href="mailto:thelight@gmail.com">thelight@gmai.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>CHÍNH SÁCH MUA HÀNG</h4>
+                    <ul>
+                        <li><a href="#">Hình thức thanh toán</a></li>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>THELIGHT © 2018 - 2023. Design by OKHUB Viet Nam</p>
+        </div>
+    </footer>
+    <script>
+        function updateQuantity(button, change) {
+            const quantityInput = button.parentElement.querySelector('.quantity');
+            let quantity = parseInt(quantityInput.value);
+            quantity = isNaN(quantity) ? 1 : quantity + change;
+            if (quantity < 1) quantity = 1;
+            quantityInput.value = quantity;
+            calculateSubtotal(quantityInput);
+        }
+
+        function calculateSubtotal(quantityInput) {
+            const row = quantityInput.closest('tr');
+            const price = parseInt(row.querySelector('.price').textContent);
+            const quantity = parseInt(quantityInput.value);
+            const subtotal = price * quantity;
+            row.querySelector('.subtotal').textContent = subtotal;
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const subtotals = document.querySelectorAll('.subtotal');
+            let total = 0;
+            subtotals.forEach(sub => {
+                total += parseInt(sub.textContent);
+            });
+            document.querySelectorAll('.total').forEach(el => el.textContent = total);
+        }
+    </script>
+</body>
+</html>

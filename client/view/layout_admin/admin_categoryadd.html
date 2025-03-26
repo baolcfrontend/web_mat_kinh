@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/client/public/assets/css/block.css">
+    <link rel="stylesheet" href="/client/public/assets/css/layout.css">
+    <style>
+        /* Tổng thể trang */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #0288d1;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Form container */
+        .form-container {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 40px auto;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form group */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #0288d1;
+            outline: none;
+            box-shadow: 0 0 5px rgba(2, 136, 209, 0.2);
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: border-color 0.3s ease-in-out;
+            color: #333;
+        }
+
+        select:focus {
+            border-color: #0288d1;
+            outline: none;
+            box-shadow: 0 0 5px rgba(2, 136, 209, 0.2);
+        }
+
+        /* Buttons */
+        button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button.btn {
+            background-color: #0288d1;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        button.btn:hover {
+            background-color: #026fa1;
+            transform: translateY(-2px);
+        }
+
+        button.btn-danger {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        button.btn-danger:hover {
+            background-color: #b52a37;
+            transform: translateY(-2px);
+        }
+
+        button a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            button {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+        }
+
+        /* Phần mở rộng / thu gọn thông tin */
+        .toggle-content {
+            display: none;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .toggle-button {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            color: #0288d1;
+            font-size: 1.2rem;
+        }
+
+        .toggle-button i {
+            margin-right: 5px;
+        }
+
+        .toggle-button:hover {
+            color: #026fa1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>Quản lý</h1>
+                <a href="/client/view/layout_admin/admin.html"><img style="filter: brightness(500%);"
+                        src="/client/public/img/Sunny.png" alt="Logo" width="100px 100px"></a>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="/client/view/layout_admin/admin.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                <li><a href="/client/view/layout_admin/admin_user.html"><i class="fa-solid fa-user"></i> Người dùng</a></li>
+                <li><a href="/client/view/layout_admin/admin_category.html"><i class="fa-solid fa-list"></i> Danh mục</a></li>
+                <li><a href="/client/view/layout_admin/admin_product.html"><i class="fa-brands fa-product-hunt"></i> Sản
+                        phẩm</a></li>
+                <li><a href="/client/view/layout_admin/admin_cart.html"><i class="fa-solid fa-truck-fast"></i> Đơn hàng</a>
+                </li>
+                <li><a href="/client/view/layout_admin/admin_blog.html"><i class="fa-solid fa-blog"></i> Bài viết</a></li>
+                <li><a href="/client/view/layout_admin/admin_comment.html"><i class="fa-solid fa-comment"></i> Đánh giá</a>
+                </li>
+                <li><a href="/client/index.html"><i class="fa-solid fa-rotate-left"></i> Quay về trang web</a></li>
+            </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content" id="body">
+
+            <header>
+                <h1>Thêm Mới Danh Mục</h1>
+            </header>
+
+            <div class="form-container">
+                <form action="" id="addCategoryForm">
+                    <div class="form-group">
+                        <label for="categoryname">Tên Danh Mục</label>
+                        <input type="text" id="categoryname" name="categoryname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="categoryImage">Hình ảnh</label>
+                        <input type="file" id="categoryImage" name="categoryImage" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="btn">Thêm Danh Mục</button>
+                       <button type="reset" class="btn btn-danger"><a href="/client/view/layout_admin/admin_user.html">Trở về danh sách</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

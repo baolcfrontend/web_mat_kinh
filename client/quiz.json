@@ -1,0 +1,1344 @@
+{
+  "quiz": [
+    {
+      "id": "1",
+      "name": "Văn hóa - Xã hội"
+    },
+    {
+      "id": "2",
+      "name": "Lịch sử - Địa lý"
+    }
+  ],
+  "question": [
+    {
+      "id": "1",
+      "content": "Thủ đô của Việt Nam là gì?",
+      "option": {
+        "A": "Hồ Chí Minh",
+        "B": "Hà Nội",
+        "C": "Đà Nẵng",
+        "D": "Huế"
+      },
+      "quizId": 1,
+      "answer": "B"
+    },
+    {
+      "id": "2",
+      "content": "Năm nào Việt Nam giành được độc lập?",
+      "option": {
+        "A": "1945",
+        "B": "1954",
+        "C": "1975",
+        "D": "1986"
+      },
+      "quizId": 1,
+      "answer": "A"
+    },
+    {
+      "id": "3",
+      "content": "Người sáng lập ra Facebook là ai?",
+      "option": {
+        "A": "Bill Gates",
+        "B": "Steve Jobs",
+        "C": "Mark Zuckerberg",
+        "D": "Elon Musk"
+      },
+      "quizId": 1,
+      "answer": "C"
+    },
+    {
+      "id": "4",
+      "content": "Thành phố nào được mệnh danh là 'Thành phố ngàn hoa'?",
+      "option": {
+        "A": "Hà Nội",
+        "B": "Đà Nẵng",
+        "C": "Đà Lạt",
+        "D": "Hồ Chí Minh"
+      },
+      "quizId": 1,
+      "answer": "C"
+    },
+    {
+      "id": "5",
+      "content": "Ai là người phát minh ra bóng đèn điện?",
+      "option": {
+        "A": "Thomas Edison",
+        "B": "Nikola Tesla",
+        "C": "Alexander Graham Bell",
+        "D": "Albert Einstein"
+      },
+      "quizId": 1,
+      "answer": "A"
+    },
+    {
+      "id": "6",
+      "content": "Quốc gia nào có diện tích lớn nhất thế giới?",
+      "option": {
+        "A": "Canada",
+        "B": "Trung Quốc",
+        "C": "Hoa Kỳ",
+        "D": "Nga"
+      },
+      "quizId": 1,
+      "answer": "D"
+    },
+    {
+      "id": "7",
+      "content": "Ngôn ngữ nào được sử dụng nhiều nhất trên thế giới?",
+      "option": {
+        "A": "Tiếng Anh",
+        "B": "Tiếng Trung",
+        "C": "Tiếng Tây Ban Nha",
+        "D": "Tiếng Hindi"
+      },
+      "quizId": 1,
+      "answer": "B"
+    },
+    {
+      "id": "8",
+      "content": "Ai là người đầu tiên đặt chân lên mặt trăng?",
+      "option": {
+        "A": "Yuri Gagarin",
+        "B": "Neil Armstrong",
+        "C": "Buzz Aldrin",
+        "D": "Michael Collins"
+      },
+      "quizId": 1,
+      "answer": "B"
+    },
+    {
+      "id": "9",
+      "content": "Thành phố nào là trung tâm tài chính của Nhật Bản?",
+      "option": {
+        "A": "Tokyo",
+        "B": "Osaka",
+        "C": "Kyoto",
+        "D": "Nagoya"
+      },
+      "quizId": 1,
+      "answer": "A"
+    },
+    {
+      "id": "10",
+      "content": "Ai là tác giả của cuốn tiểu thuyết 'Chiến tranh và hòa bình'?",
+      "option": {
+        "A": "Fyodor Dostoevsky",
+        "B": "Leo Tolstoy",
+        "C": "Anton Chekhov",
+        "D": "Ivan Turgenev"
+      },
+      "quizId": 1,
+      "answer": "B"
+    },
+    {
+      "id": "11",
+      "content": "Quốc gia nào có dân số đông nhất thế giới?",
+      "option": {
+        "A": "Ấn Độ",
+        "B": "Hoa Kỳ",
+        "C": "Trung Quốc",
+        "D": "Indonesia"
+      },
+      "quizId": 2,
+      "answer": "C"
+    },
+    {
+      "id": "12",
+      "content": "Thành phố nào được mệnh danh là 'Thành phố ánh sáng'?",
+      "option": {
+        "A": "New York",
+        "B": "Paris",
+        "C": "London",
+        "D": "Tokyo"
+      },
+      "quizId": 2,
+      "answer": "B"
+    },
+    {
+      "id": "13",
+      "content": "Ai là người phát minh ra máy bay?",
+      "option": {
+        "A": "Thomas Edison",
+        "B": "Alexander Graham Bell",
+        "C": "Wright Brothers",
+        "D": "Nikola Tesla"
+      },
+      "quizId": 2,
+      "answer": "C"
+    },
+    {
+      "id": "14",
+      "content": "Quốc gia nào có nền kinh tế lớn nhất thế giới?",
+      "option": {
+        "A": "Trung Quốc",
+        "B": "Nhật Bản",
+        "C": "Đức",
+        "D": "Hoa Kỳ"
+      },
+      "quizId": 2,
+      "answer": "D"
+    },
+    {
+      "id": "15",
+      "content": "Ai là người sáng lập ra Microsoft?",
+      "option": {
+        "A": "Steve Jobs",
+        "B": "Bill Gates",
+        "C": "Mark Zuckerberg",
+        "D": "Larry Page"
+      },
+      "quizId": 2,
+      "answer": "B"
+    },
+    {
+      "id": "16",
+      "content": "Thành phố nào là thủ đô của Nhật Bản?",
+      "option": {
+        "A": "Osaka",
+        "B": "Kyoto",
+        "C": "Tokyo",
+        "D": "Nagoya"
+      },
+      "quizId": 2,
+      "answer": "C"
+    },
+    {
+      "id": "17",
+      "content": "Ai là người viết cuốn tiểu thuyết 'Đồi gió hú'?",
+      "option": {
+        "A": "Jane Austen",
+        "B": "Charlotte Brontë",
+        "C": "Emily Brontë",
+        "D": "Mary Shelley"
+      },
+      "quizId": 2,
+      "answer": "C"
+    },
+    {
+      "id": "18",
+      "content": "Quốc gia nào nổi tiếng với lễ hội hoa anh đào?",
+      "option": {
+        "A": "Hàn Quốc",
+        "B": "Trung Quốc",
+        "C": "Nhật Bản",
+        "D": "Việt Nam"
+      },
+      "quizId": 2,
+      "answer": "C"
+    },
+    {
+      "id": "19",
+      "content": "Ai là người phát minh ra điện thoại?",
+      "option": {
+        "A": "Thomas Edison",
+        "B": "Alexander Graham Bell",
+        "C": "Nikola Tesla",
+        "D": "Guglielmo Marconi"
+      },
+      "quizId": 2,
+      "answer": "B"
+    },
+    {
+      "id": "20",
+      "content": "Thành phố nào là thủ đô của Pháp?",
+      "option": {
+        "A": "Marseille",
+        "B": "Lyon",
+        "C": "Nice",
+        "D": "Paris"
+      },
+      "quizId": 2,
+      "answer": "D"
+    }
+  ],
+  "user": [
+    {
+      "id": "2",
+      "name": "Thầy Cường nè",
+      "email": "thaycuong@gmail.com",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "428a",
+      "name": "bảo",
+      "email": "bao123lacao@gmail.com",
+      "password": "1233123",
+      "role": "student"
+    },
+    {
+      "id": "611e",
+      "name": "bảo",
+      "email": "bao123@gmail.com",
+      "password": "1233123",
+      "role": "student"
+    },
+    {
+      "id": "192c",
+      "name": "bảo",
+      "email": "bao@gmail.com",
+      "password": "1233123",
+      "role": "student"
+    },
+    {
+      "id": "f9bd",
+      "name": "bảo",
+      "email": "bao41487@gmail.com",
+      "password": "bao123",
+      "role": "student"
+    },
+    {
+      "id": "c654",
+      "name": "bảo",
+      "email": "baolcps@gmail.com",
+      "password": "1241242",
+      "role": "student"
+    },
+    {
+      "id": "8244",
+      "name": "bảo",
+      "email": "baolcps2222@gmail.com",
+      "password": "baolcps41487",
+      "role": "student"
+    },
+    {
+      "id": "8fed",
+      "name": "thaycuong",
+      "email": "cuong123@gmail.com",
+      "password": "bao123",
+      "role": "student"
+    },
+    {
+      "id": "777b",
+      "name": "Lê Chí Bảo",
+      "email": "baolcps41487@gmail.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "6bf4",
+      "name": "Lê Chí Bảo",
+      "email": "baolcps41487@gmail.com",
+      "password": "123123",
+      "role": "admin"
+    },
+    {
+      "id": "c9ed",
+      "name": "Lê Chí Bảo",
+      "email": "baolcps41487@gmail.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "b9d7",
+      "name": "Lê Chí Bảo",
+      "email": "baolcps41487@gmail.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": "cea9",
+      "name": "baoleee",
+      "email": "baolc487@gmail.com",
+      "password": "baole2005",
+      "role": "student"
+    },
+    {
+      "id": "0658",
+      "name": "baolechi2005",
+      "email": "bao2005@gmail.com",
+      "password": "bao2005",
+      "role": "student"
+    },
+    {
+      "id": "cc0a",
+      "name": "Lê Chí Bảo nè",
+      "email": "baolcps2005@gmail.com",
+      "password": "bao2005",
+      "role": "user"
+    }
+  ],
+ 
+  "product": [
+    {
+      "id": "2",
+      "name": "GK. GỌNG NHỰA CỨNG AN086",
+      "price": "800000",
+      "salePrice": "",
+      "discountPercentage": "",
+      "img": "trong2.jpeg",
+      "description": "Gọng kính nhựa cứng, mã AN086.",
+      "quantity": 12,
+      "code": "AN086",
+      "width": "12cm",
+      "lengthmm": "11cm",
+      "glasses": "Plastic",
+      "color": ["Đen", "Trắng", "Xanh"],
+      "category": "4",
+      "dateAdded": "2025-01-15"
+    },
+    {
+      "id": "3",
+      "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+      "price": "500000",
+      "salePrice": "",
+      "discountPercentage": "",
+      "img": "trong3.jpeg",
+      "description": "Gọng kính chất liệu kim loại, mã AN226825.",
+      "quantity": 13,
+      "code": "AN226825",
+      "width": "13.5cm",
+      "lengthmm": "13cm",
+      "glasses": "Metal",
+      "color": ["Đen", "Xám", "Bạc"],
+      "category": "5",
+      "dateAdded": "2025-01-15"
+    },
+    {
+      "id": "4",
+      "name": "GK. GỌNG CÀNG KIM LOẠI AN221415",
+      "price": "400000",
+      "salePrice": "",
+      "discountPercentage": "",
+      "img": "ghi-5.jpeg",
+      "description": "Gọng kính càng kim loại, mã AN221415.",
+      "quantity": 12,
+      "code": "AN221415",
+     " width": "13cm",
+      "lengthmm": "12.5cm",
+      "glasses": "Metal",
+      "color": ["Đen", "Bạc"],
+      "category": "4",
+      "dateAdded": "2025-01-15"
+    },
+    {
+      "id": "5",
+      "name": "GK. GỌNG NHỰA CỨNG TITAN MỎNG",
+      "price": "1200000",
+      "salePrice": "1080000",
+      "discountPercentage": "10%",
+      "img": "trong4.jpeg",
+      "description": "Gọng kính cao cấp làm từ nhựa titan mỏng nhẹ.",
+      "quantity": 12,
+      "code": "TITAN-02",
+      "width": "14cm",
+      "lengthmm": "13cm",
+      "glasses": "Titan",
+      "color": ["Đen", "Vàng"],
+      "category": "1",
+      "dateAdded": "2025-01-15"
+    },
+    {
+      "id": "6",
+      "name": "GK. GỌNG NHỰA DẺO AN302",
+      "price": "950000",
+      "salePrice": "855000",
+      "discountPercentage": "10%",
+      "img": "trong3.jpeg",
+      "description": "Gọng kính nhựa dẻo, mã AN302.",
+      "quantity": 12,
+      "code": "AN302",
+      "width": "13cm",
+      "lengthmm": "12cm",
+      "glasses": "Plastic",
+      "color": ["Đen", "Đỏ", "Xanh Dương"],
+      "category": "2",
+      "dateAdded": "2025-01-15"
+    },
+    {
+      "id": "7",
+      "name": "GK. GỌNG KIM LOẠI MẠ VÀNG AN554",
+      "price": "700000",
+      "salePrice": "630000",
+      "discountPercentage": "10%",
+      "img": "trong2.jpeg",
+      "description": "Gọng kính kim loại mạ vàng, mã AN554.",
+      "quantity": 12,
+      "code": "AN554",
+      "width": "12.5cm",
+      "lengthmm": "12cm",
+      "glasses": "Metal",
+      "color": ["Vàng", "Bạc"],
+      "category": "3",
+      "dateAdded": "2025-01-15"
+    },
+    {
+      "id": "8",
+      "name": "GK. GỌNG VIỀN MỞ TITAN CAO CẤP",
+      "price": "1500000",
+      "salePrice": "1350000",
+      "discountPercentage": "10%",
+      "img": "trong1.jpeg",
+      "description": "Gọng kính titan thiết kế viền mở hiện đại.",
+      "quantity": 15,
+      "code": "TITAN-03",
+      "width": "14.5cm",
+      "lengthmm": "13.5cm",
+      "glasses": "Titan",
+      "color": ["Đen", "Xám"],
+      "category": "1",
+      "dateAdded": "2025-01-15"
+    },
+    {
+      "id": "9",
+      "name": "GK. GỌNG NHỰA CỨNG KÍNH TRÒN AN406",
+      "price": "850000",
+      "salePrice": "",
+      "discountPercentage": "",
+      "img": "ghi-4.jpeg",
+      "description": "Gọng kính nhựa cứng phong cách cổ điển, mã AN406.",
+      "quantity": 1,
+      "code": "AN406",
+      "width": "12.5cm",
+      "lengthmm": "11.5cm",
+      "glasses": "Plastic",
+      "color": ["Trắng", "Đen"],
+      "category": "2",
+      "dateAdded": "2025-01-15"
+    },
+    {
+      "id": "10",
+      "name": "GK. GỌNG KIM LOẠI CAO CẤP AN799",
+      "price": "600000",
+      "salePrice": "",
+      "discountPercentage": "",
+      "img": "ghi-5.jpeg",
+      "description": "Gọng kính kim loại chắc chắn, mã AN799.",
+      "quantity": 1,
+      "code": "AN799",
+      "width": "13cm",
+      "lengthmm": "12.5cm",
+      "glasses": "Metal",
+      "color": ["Đen", "Bạc"],
+      "category": "3",
+      "dateAdded": "2025-01-15"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "name": "Gọng kính Titan",
+      "image": "anh8.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Gọng kính Nhựa",
+      "image": "anh9.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Gọng kính Kim loại",
+      "image": "anh10.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Gọng kính Thời trang",
+      "image": "anh12.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Gọng kính Trẻ em",
+      "image": "anh14.jpg"
+    }
+  ],
+  "thuoc_tinh": [
+    {
+      "id": "2",
+      "id_sp": "2",
+      "chat_lieu": "Nhựa cứng cao cấp",
+      "kich_thuoc": "12cm x 11cm",
+      "mo_ta": "Gọng kính nhựa cứng, mã AN086.",
+      "dac_diem_noi_bat": "Nhẹ nhàng, độ bền cao, chống trầy xước.",
+      "ung_dung": "Phù hợp cho công việc văn phòng, sử dụng hàng ngày.",
+      "luu_y": [
+        "Tránh va đập mạnh.",
+        "Lau kính bằng khăn mềm.",
+        "Bảo quản trong hộp khi không dùng."
+      ],
+      "image": ["trong2.jpeg", "trong1.jpeg", "trong3.jpeg", "trong4.jpeg"],
+      "kich_thuoc_trong_kinh": "20mm",
+      "cau_kinh": "18mm",
+      "chieu_dai_cang_kinh": "135mm"
+    },
+    {
+      "id": "3",
+      "id_sp": "3",
+      "chat_lieu": "Kim loại bền chắc",
+      "kich_thuoc": "13.5cm x 13cm",
+      "mo_ta": "Gọng kính chất liệu kim loại, mã AN226825.",
+      "dac_diem_noi_bat": "Chống gỉ, thiết kế thanh lịch, hiện đại.",
+      "ung_dung": "Thích hợp cho doanh nhân và người yêu thời trang.",
+      "luu_y": [
+        "Tránh tiếp xúc với hóa chất mạnh.",
+        "Lau kính bằng khăn chuyên dụng.",
+        "Bảo quản nơi khô ráo."
+      ],
+      "image": ["trong2.jpeg", "trong1.jpeg", "trong3.jpeg", "trong4.jpeg"],
+      "kich_thuoc_trong_kinh": "22mm",
+      "cau_kinh": "19mm",
+      "chieu_dai_cang_kinh": "140mm"
+    },
+    {
+      "id": "4",
+      "id_sp": "4",
+      "chat_lieu": "Kim loại cao cấp",
+      "kich_thuoc": "13cm x 12.5cm",
+      "mo_ta": "Gọng kính càng kim loại, mã AN221415.",
+      "dac_diem_noi_bat": "Độ bền cao, chống cong vênh, thiết kế sang trọng.",
+      "ung_dung": "Phù hợp cho các buổi họp và sự kiện quan trọng.",
+      "luu_y": [
+        "Tránh để kính rơi từ độ cao.",
+        "Dùng khăn mềm để lau sạch kính.",
+        "Bảo quản trong hộp tránh bụi."
+      ],
+      "image": ["ghi-5.jpeg", "ghi-4.jpeg", "ghi-6.jpeg", "ghi-3.jpeg"],
+      "kich_thuoc_trong_kinh": "21mm",
+      "cau_kinh": "17mm",
+      "chieu_dai_cang_kinh": "145mm"
+    },
+    {
+      "id": "5",
+      "id_sp": "5",
+      "chat_lieu": "Nhựa titan mỏng nhẹ",
+      "kich_thuoc": "14cm x 13cm",
+      "mo_ta": "Gọng kính cao cấp làm từ nhựa titan mỏng nhẹ.",
+      "dac_diem_noi_bat": "Siêu nhẹ, chống gỉ, thiết kế tinh tế.",
+      "ung_dung": "Phù hợp cho những người thường xuyên di chuyển.",
+      "luu_y": [
+        "Không để kính gần nguồn nhiệt.",
+        "Lau bằng khăn khô, mềm.",
+        "Tránh tiếp xúc với hóa chất tẩy rửa."
+      ],
+      "image": ["trong2.jpeg", "trong1.jpeg", "trong3.jpeg", "trong4.jpeg"],
+      "kich_thuoc_trong_kinh": "23mm",
+      "cau_kinh": "19mm",
+      "chieu_dai_cang_kinh": "150mm"
+    },
+    {
+      "id": "6",
+      "id_sp": "6",
+      "chat_lieu": "Nhựa dẻo cao cấp",
+      "kich_thuoc": "13cm x 12cm",
+      "mo_ta": "Gọng kính nhựa dẻo, mã AN302.",
+      "dac_diem_noi_bat": "Dẻo dai, khó gãy, màu sắc đa dạng.",
+      "ung_dung": "Phù hợp khi vận động hoặc đi du lịch.",
+      "luu_y": [
+        "Làm sạch bằng khăn ẩm.",
+        "Tránh tiếp xúc với hóa chất.",
+        "Bảo quản kính trong hộp cứng."
+      ],
+      "image": ["trong2.jpeg", "trong1.jpeg", "trong3.jpeg", "trong4.jpeg"],
+      "kich_thuoc_trong_kinh": "21mm",
+      "cau_kinh": "18mm",
+      "chieu_dai_cang_kinh": "142mm"
+    },
+    {
+      "id": "7",
+      "id_sp": "7",
+      "chat_lieu": "Kim loại mạ vàng",
+      "kich_thuoc": "12.5cm x 12cm",
+      "mo_ta": "Gọng kính kim loại mạ vàng, mã AN554.",
+      "dac_diem_noi_bat": "Sang trọng, bền bỉ, chống ăn mòn.",
+      "ung_dung": "Dành cho các buổi tiệc hoặc sự kiện quan trọng.",
+      "luu_y": [
+        "Lau bằng khăn khô.",
+        "Tránh tiếp xúc với nước muối.",
+        "Bảo quản kính trong hộp bảo vệ."
+      ],
+      "image": ["trong2.jpeg", "trong1.jpeg", "trong3.jpeg", "trong4.jpeg"],
+      "kich_thuoc_trong_kinh": "20mm",
+      "cau_kinh": "18mm",
+      "chieu_dai_cang_kinh": "138mm"
+    },
+    {
+      "id": "8",
+      "id_sp": "8",
+      "chat_lieu": "Titan cao cấp",
+      "kich_thuoc": "14.5cm x 13.5cm",
+      "mo_ta": "Gọng kính titan thiết kế viền mở hiện đại.",
+      "dac_diem_noi_bat": "Nhẹ, độ bền cao, phong cách hiện đại.",
+      "ung_dung": "Thích hợp khi đi làm, đi họp hoặc gặp gỡ đối tác.",
+      "luu_y": [
+        "Tránh để kính dưới ánh nắng trực tiếp lâu.",
+        "Lau sạch kính sau khi sử dụng.",
+        "Bảo quản nơi khô ráo."
+      ],
+      "image": ["trong2.jpeg", "trong1.jpeg", "trong3.jpeg", "trong4.jpeg"],
+      "kich_thuoc_trong_kinh": "24mm",
+      "cau_kinh": "19mm",
+      "chieu_dai_cang_kinh": "148mm"
+    },
+    {
+      "id": "9",
+      "id_sp": "9",
+      "chat_lieu": "Nhựa cứng",
+      "kich_thuoc": "12.5cm x 11.5cm",
+      "mo_ta": "Gọng kính nhựa cứng phong cách cổ điển, mã AN406.",
+      "dac_diem_noi_bat": "Phong cách cổ điển, độ bền cao.",
+      "ung_dung": "Phù hợp khi đi học, đi làm hoặc gặp bạn bè.",
+      "luu_y": [
+        "Tránh để kính rơi từ độ cao.",
+        "Lau bằng khăn sạch.",
+        "Bảo quản trong hộp bảo vệ."
+      ],
+    "image": ["ghi-5.jpeg", "ghi-4.jpeg", "ghi-6.jpeg", "ghi-3.jpeg"],
+      "kich_thuoc_trong_kinh": "19mm",
+      "cau_kinh": "17mm",
+      "chieu_dai_cang_kinh": "140mm"
+    },
+    {
+      "id": "10",
+      "id_sp": "10",
+      "chat_lieu": "Kim loại chắc chắn",
+      "kich_thuoc": "13cm x 12.5cm",
+      "mo_ta": "Gọng kính kim loại chắc chắn, mã AN799.",
+      "dac_diem_noi_bat": "Chắc chắn, chống cong vênh, thiết kế tối giản.",
+      "ung_dung": "Thích hợp khi đi làm hoặc học tập.",
+      "luu_y": [
+        "Tránh để kính nơi ẩm ướt.",
+        "Lau sạch kính định kỳ.",
+        "Bảo quản nơi thoáng mát."
+      ],
+     "image": ["ghi-5.jpeg", "ghi-4.jpeg", "ghi-6.jpeg", "ghi-3.jpeg"],
+      "kich_thuoc_trong_kinh": "21mm",
+      "cau_kinh": "19mm",
+      "chieu_dai_cang_kinh": "145mm"
+    }
+  ],
+
+
+  "cart": [
+    {
+      "id": "3",
+      "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+      "price": "500000",
+      "img": "trong3.jpeg",
+      "description": "Gọng kính chất liệu kim loại, mã AN226825.",
+      "code": "AN226825",
+      "width": "13.5cm",
+      "lengthmm": "13cm",
+      "glasses": "Metal",
+      "salePrice": "450000",
+      "color": "Xám",
+      "quantity": 1
+    },
+    {
+      "id": "3",
+      "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+      "price": "500000",
+      "img": "trong3.jpeg",
+      "description": "Gọng kính chất liệu kim loại, mã AN226825.",
+      "code": "AN226825",
+      "width": "13.5cm",
+      "lengthmm": "13cm",
+      "glasses": "Metal",
+      "salePrice": "450000",
+      "color": "Xám",
+      "quantity": 1
+    },
+    {
+      "id": "4",
+      "name": "GK. GỌNG CÀNG KIM LOẠI AN221415",
+      "price": "400000",
+      "img": "ghi-5.jpeg",
+      "description": "Gọng kính càng kim loại, mã AN221415.",
+      "code": "AN221415",
+      "width": "13cm",
+      "lengthmm": "12.5cm",
+      "glasses": "Metal",
+      "salePrice": "360000",
+      "color": "Bạc",
+      "quantity": 1
+    },
+    {
+      "id": "3",
+      "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+      "price": "500000",
+      "img": "trong3.jpeg",
+      "description": "Gọng kính chất liệu kim loại, mã AN226825.",
+      "code": "AN226825",
+      "width": "13.5cm",
+      "lengthmm": "13cm",
+      "glasses": "Metal",
+      "salePrice": "450000",
+      "color": "Xám",
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "fdff",
+      "firstName": "bảo",
+      "phone": "0338538203",
+      "address": "1371 Phan Văn Trị.",
+      "orderNotes": "sadfghjm,.zxcvbnm",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG KIM LOẠI MẠ VÀNG AN554",
+          "quantity": 1,
+          "price": "630000.00",
+          "color": "Bạc",
+          "total": "630000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Bạc",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Đen",
+          "total": "450000.00"
+        }
+      ],
+      "totalPrice": "1980000.00",
+      "orderDate": "29/01/2024",
+      "status": "Đang chờ xử lý",
+      "userId": "cea9"
+    },
+    {
+      "id": "7d05",
+      "firstName": "bảo",
+      "phone": "0338538203",
+      "address": "1371 Phan Văn Trị.",
+      "orderNotes": "cvbnmmvcxzZxcvbn",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        }
+      ],
+      "totalPrice": "900000.00",
+      "orderDate": "25/11/2024",
+      "status": "Đang chờ xử lý",
+      "userId": "0658"
+    },
+    {
+      "id": "7d05",
+      "firstName": "bảo",
+      "phone": "0338538203",
+      "address": "1371 Phan Văn Trị.",
+      "orderNotes": "cvbnmmvcxzZxcvbn",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        }
+      ],
+      "totalPrice": "900000.00",
+      "orderDate": "20/11/2024",
+      "status": "Đã giao hàng",
+      "userId": "0658"
+    },
+    {
+      "id": "a1bc",
+      "firstName": "Thảo",
+      "phone": "0338567894",
+      "address": "24 Đường Lê Lợi, HCM",
+      "orderNotes": "Yêu cầu giao hàng nhanh",
+      "paymentMethod": "Chuyển khoản",
+      "items": [
+        {
+          "name": "GK. GỌNG KIM LOẠI AN557",
+          "quantity": 2,
+          "price": "600000.00",
+          "color": "Vàng",
+          "total": "1200000.00"
+        }
+      ],
+      "totalPrice": "1200000.00",
+      "orderDate": "29/11/2024",
+      "status": "Đã hủy",
+      "userId": "fc12"
+    },
+    {
+      "id": "a2bc",
+      "firstName": "Ngọc",
+      "phone": "0338578934",
+      "address": "15 Nguyễn Trãi, HCM",
+      "orderNotes": "Giao vào buổi chiều",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226828",
+          "quantity": 1,
+          "price": "550000.00",
+          "color": "Đỏ",
+          "total": "550000.00"
+        }
+      ],
+      "totalPrice": "550000.00",
+      "orderDate": "10/09/2024",
+      "status": "Đang giao hàng",
+      "userId": "23f6"
+    },
+    {
+      "id": "a3bc",
+      "firstName": "Lan",
+      "phone": "0338587563",
+      "address": "78 Đường Hùng Vương, Đà Nẵng",
+      "orderNotes": "Giao sớm nhất có thể",
+      "paymentMethod": "Chuyển khoản",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "500000.00",
+          "color": "Trắng",
+          "total": "500000.00"
+        }
+      ],
+      "totalPrice": "500000.00",
+      "orderDate": "01/08/2024",
+      "status": "Đã giao hàng",
+      "userId": "1abc"
+    },
+    {
+      "id": "a4bc",
+      "firstName": "Mai",
+      "phone": "0338534312",
+      "address": "56 Trường Chinh, HCM",
+      "orderNotes": "Giao tận nơi",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226829",
+          "quantity": 1,
+          "price": "460000.00",
+          "color": "Xám",
+          "total": "460000.00"
+        }
+      ],
+      "totalPrice": "460000.00",
+      "orderDate": "12/07/2024",
+      "status": "Đã giao hàng",
+      "userId": "9f45"
+    },
+    {
+      "id": "a5bc",
+      "firstName": "Vân",
+      "phone": "0338523122",
+      "address": "42 Nguyễn Huệ, HCM",
+      "orderNotes": "Thanh toán sau khi nhận hàng",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG KIM LOẠI AN559",
+          "quantity": 2,
+          "price": "500000.00",
+          "color": "Đen",
+          "total": "1000000.00"
+        }
+      ],
+      "totalPrice": "1000000.00",
+      "orderDate": "18/10/2024",
+      "status": "Đã giao hàng",
+      "userId": "d6f7"
+    },
+    {
+      "id": "a6bc",
+      "firstName": "Duy",
+      "phone": "0338593124",
+      "address": "22 Trần Phú, Hà Nội",
+      "orderNotes": "Giao tại nhà riêng",
+      "paymentMethod": "Chuyển khoản",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226826",
+          "quantity": 2,
+          "price": "470000.00",
+          "color": "Bạc",
+          "total": "940000.00"
+        }
+      ],
+      "totalPrice": "940000.00",
+      "orderDate": "28/06/2024",
+      "status": "Đã giao hàng",
+      "userId": "1e3f"
+    },
+    {
+      "id": "a7bc",
+      "firstName": "Kiên",
+      "phone": "0338601285",
+      "address": "19 Lý Thường Kiệt, HCM",
+      "orderNotes": "Hãy gọi trước khi giao",
+      "paymentMethod": "Chuyển khoản",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226827",
+          "quantity": 1,
+          "price": "480000.00",
+          "color": "Vàng",
+          "total": "480000.00"
+        }
+      ],
+      "totalPrice": "480000.00",
+      "orderDate": "22/11/2024",
+      "status": "Đã giao hàng",
+      "userId": "3d2f"
+    },
+    {
+      "id": "a8bc",
+      "firstName": "Hà",
+      "phone": "0338612195",
+      "address": "30 Trần Đại Nghĩa, Đà Nẵng",
+      "orderNotes": "Không cần gói quà",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226826",
+          "quantity": 1,
+          "price": "520000.00",
+          "color": "Trắng",
+          "total": "520000.00"
+        }
+      ],
+      "totalPrice": "520000.00",
+      "orderDate": "10/05/2024",
+      "status": "Đã giao hàng",
+      "userId": "ef45"
+    },
+    {
+      "id": "a9bc",
+      "firstName": "Phúc",
+      "phone": "0338632455",
+      "address": "11 Võ Thị Sáu, HCM",
+      "orderNotes": "Giao trước ngày 10",
+      "paymentMethod": "Chuyển khoản",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "460000.00",
+          "color": "Đen",
+          "total": "460000.00"
+        }
+      ],
+      "totalPrice": "460000.00",
+      "orderDate": "04/04/2024",
+      "status": "Đã giao hàng",
+      "userId": "ab32"
+    },
+    {
+      "id": "aa0b",
+      "firstName": "Cường",
+      "phone": "0338617444",
+      "address": "14 Nguyễn Hữu Cảnh, HCM",
+      "orderNotes": "Giao vào sáng sớm",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "490000.00",
+          "color": "Xám",
+          "total": "490000.00"
+        }
+      ],
+      "totalPrice": "490000.00",
+      "orderDate": "03/03/2024",
+      "status": "Đã giao hàng",
+      "userId": "2d1f"
+    },
+    {
+      "id": "ab1c",
+      "firstName": "Linh",
+      "phone": "0338625279",
+      "address": "58 Bạch Đằng, Đà Nẵng",
+      "orderNotes": "Không gấp",
+      "paymentMethod": "Chuyển khoản",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226826",
+          "quantity": 2,
+          "price": "440000.00",
+          "color": "Bạc",
+          "total": "880000.00"
+        }
+      ],
+      "totalPrice": "880000.00",
+      "orderDate": "02/02/2024",
+      "status": "Đã giao hàng",
+      "userId": "5f6a"
+    },
+    {
+      "id": "e46c",
+      "firstName": "bảo",
+      "phone": "0338538203",
+      "address": "1371 Phan Văn Trị.",
+      "orderNotes": "",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CÀNG KIM LOẠI AN221415",
+          "quantity": 1,
+          "price": "360000.00",
+          "color": "Bạc",
+          "total": "360000.00"
+        }
+      ],
+      "totalPrice": "1260000.00",
+      "orderDate": "29/11/2024",
+      "status": "Đã giao hàng",
+      "userId": "0658"
+    },
+    {
+      "id": "e779",
+      "firstName": "bảo",
+      "phone": "0338538203",
+      "address": "1371 Phan Văn Trị.",
+      "orderNotes": "xcvbnm,ádfg",
+      "paymentMethod": "Chuyển khoản ngân hàng",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CÀNG KIM LOẠI AN221415",
+          "quantity": 1,
+          "price": "360000.00",
+          "color": "Bạc",
+          "total": "360000.00"
+        }
+      ],
+      "totalPrice": "1260000.00",
+      "orderDate": "30/11/2024",
+      "status": "Đã giao hàng",
+      "userId": "0658"
+    },
+    {
+      "id": "7dc6",
+      "firstName": "Hoàng",
+      "phone": "0338538203",
+      "address": "1371 Phan Văn Trị.",
+      "orderNotes": "giao nhanh giúp em",
+      "paymentMethod": "Chuyển khoản ngân hàng",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CÀNG KIM LOẠI AN221415",
+          "quantity": 1,
+          "price": "360000.00",
+          "color": "Bạc",
+          "total": "360000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        }
+      ],
+      "totalPrice": "1710000.00",
+      "orderDate": "03/12/2024",
+      "status": "Đã giao hàng",
+      "userId": "0658"
+    },
+    {
+      "id": "f896",
+      "firstName": "Lê Chí",
+      "phone": "0338538203",
+      "address": "1371 Phan Văn Trị.",
+      "orderNotes": "baone",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CÀNG KIM LOẠI AN221415",
+          "quantity": 1,
+          "price": "360000.00",
+          "color": "Bạc",
+          "total": "360000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        }
+      ],
+      "totalPrice": "1710000.00",
+      "orderDate": "03/12/2024",
+      "status": "Đang giao hàng",
+      "userId": "0658"
+    },
+    {
+      "id": "b502",
+      "firstName": "Lê Chí",
+      "phone": "0338538203",
+      "address": "1371 Phan Văn Trị.",
+      "orderNotes": "2345ty",
+      "paymentMethod": "Thanh toán tiền mặt",
+      "items": [
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        },
+        {
+          "name": "GK. GỌNG CÀNG KIM LOẠI AN221415",
+          "quantity": 1,
+          "price": "360000.00",
+          "color": "Bạc",
+          "total": "360000.00"
+        },
+        {
+          "name": "GK. GỌNG CỐT KIM LOẠI AN226825",
+          "quantity": 1,
+          "price": "450000.00",
+          "color": "Xám",
+          "total": "450000.00"
+        }
+      ],
+      "totalPrice": "1710000.00",
+      "orderDate": "09/12/2024",
+      "status": "Đang chờ xử lý",
+      "userId": "0658"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "ab14",
+      "productId": "2",
+      "rating": 4,
+      "comment": "sản phẩm oke",
+      "date": "2024-11-30T06:43:50.058Z",
+      "visible": true
+    },
+    {
+      "id": "408c",
+      "productId": "2",
+      "rating": 4,
+      "comment": "sản phẩm tốt",
+      "date": "2024-11-30T06:44:09.930Z",
+      "visible": true
+    },
+    {
+      "id": "c537",
+      "productId": "4",
+      "rating": 5,
+      "comment": "tôi thích nó",
+      "date": "2024-11-30T07:17:26.724Z",
+      "visible": true
+    },
+    {
+      "id": "2390",
+      "productId": "4",
+      "rating": 5,
+      "comment": "sản phẩm này chất liệu tốt",
+      "date": "2024-11-30T07:18:23.038Z",
+      "visible": false
+    },
+    {
+      "id": "3aca",
+      "productId": "6",
+      "rating": 1,
+      "comment": "ui này đẹp quá\n",
+      "date": "2024-12-03T00:56:52.869Z",
+      "visible": true
+    },
+    {
+      "id": "97b1",
+      "productId": "4",
+      "rating": 5,
+      "comment": "bảo ne",
+      "date": "2024-12-03T01:12:51.060Z"
+    }
+  ]
+}

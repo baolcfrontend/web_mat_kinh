@@ -1,0 +1,2524 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Fixed Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: rgba(130, 130, 130, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0;
+    border-radius: 50px;
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    font-weight: bold;
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
+}
+
+/* Logo */
+.logo {
+    height: 30px;
+    /* Reduced size for smaller screens */
+    cursor: pointer;
+}
+
+/* Search Bar */
+.search-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 400px;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    padding-right: 40px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #0288d1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(2, 136, 209, 0.2);
+}
+
+.search-container i {
+    position: absolute;
+    right: 15px;
+    color: #999;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.search-container i:hover {
+    color: #0288d1;
+}
+
+/* Danh sách kết quả tìm kiếm */
+#result-list {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    /* Ẩn mặc định */
+    z-index: 1000;
+}
+
+#result-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#result-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+#result-list li:hover {
+    background-color: #f0f0f0;
+}
+
+#result-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    display: block;
+}
+
+#result-list a:hover {
+    color: #0288d1;
+}
+
+#result-list {
+    position: absolute;
+    top: calc(100% + 10px);
+    /* Hiển thị dưới input */
+    left: 0;
+    width: 100%;
+    /* Chiều rộng khớp với input */
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: none;
+    /* Mặc định ẩn */
+    z-index: 1000;
+    overflow: hidden;
+}
+
+#result-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#result-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#result-list li:last-child {
+    border-bottom: none;
+    /* Xóa border dòng cuối */
+}
+
+#result-list li:hover {
+    background-color: #0288d1;
+    color: #fff;
+}
+
+#result-list img {
+    width: 40px;
+    /* Chiều rộng ảnh */
+    height: 40px;
+    /* Chiều cao ảnh */
+    object-fit: cover;
+    /* Ảnh vừa khung */
+    border-radius: 4px;
+    /* Bo góc nhẹ */
+    margin-right: 10px;
+    /* Khoảng cách với tên */
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+#result-list li:hover img {
+    transform: scale(1.1);
+    /* Phóng to nhẹ khi hover */
+}
+
+#result-list a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: inherit;
+    /* Lấy màu từ li */
+    flex-grow: 1;
+    /* Để tên sản phẩm chiếm toàn bộ không gian còn lại */
+}
+
+#result-list a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li {
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+    margin: 0;
+    transition: color 0.3s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul li:hover {
+    color: #21a6b5;
+}
+
+/* User Menu and Cart */
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-options i {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.user-options i:hover {
+    color: #007bff;
+}
+/* Menu chính */
+.user-menu {
+    position: relative;
+    width: 200px; /* Chiều rộng của menu chính */
+    color: black;
+}
+
+.user-menu ul {
+    font-size: 20px; /* Kích thước chữ menu */
+    color: black; /* Màu chữ */
+    cursor: pointer;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;
+}
+
+/* Định dạng link */
+.user-menu ul a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    display: block;
+}
+
+/* Ẩn dropdown mặc định */
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* Màu nền */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    z-index: 10;
+    width: 1350px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Khi hover thêm lớp active */
+.user-dropdown.active {
+    display: block;
+}
+
+
+
+/* Hiển thị dropdown khi hover */
+.user-menu:hover .user-dropdown {
+    display: block;
+}
+
+/* Flexbox cho dropdown */
+.dropdown-content {
+    display: flex;
+    justify-content: space-between; /* Chia đều không gian giữa chữ và hình */
+    align-items: flex-start; /* Căn nội dung dropdown từ trên xuống dưới */
+}
+
+/* Khu vực chứa chữ */
+/* Khu vực chứa chữ */
+/* Khu vực chứa chữ */
+.dropdown-items {
+    flex: 0.3; /* Chiếm 30% không gian */
+    background-color: #00B4B4; /* Màu nền của phần chữ */
+    height: 300px;
+    border: 2px solid #00B4B4; /* Viền xung quanh với màu giống nền */
+    border-radius: 5px; /* Bo góc cho viền */
+    margin: 0; /* Loại bỏ khoảng cách ngoài */
+    padding: 0; /* Loại bỏ padding để viền bao quanh sát */
+}
+
+/* Các mục trong dropdown-items */
+.dropdown-items li {
+    padding: 10px 20px; /* Đảm bảo có khoảng cách giữa các mục */
+    font-size: 20px;
+    color: white; /* Màu chữ đen */
+    text-align: left;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Đường kẻ dưới */
+}
+.dropdown-items li  a {
+  
+    color: rgb(255, 255, 255); /* Màu chữ trắng */
+ 
+}
+
+/* Màu nền khi hover */
+.dropdown-items li:hover {
+    background-color: #f4f4f4;
+   
+    color: #000000;
+}
+.dropdown-items li a:hover {
+    
+    color: #000000;
+}
+
+
+
+/* Ẩn dropdown-details mặc định */
+.dropdown-details {
+    display: flex;
+    flex-direction: row; /* Hiển thị ngang */
+    gap: 70px; /* Khoảng cách giữa các mục */
+ 
+}
+
+/* Hiển thị dropdown-details khi hover vào Gọng Kính */
+.dropdown-item:hover + .dropdown-details:hover {
+    display: flex; /* Hiển thị dưới dạng hàng ngang */
+    display: none;
+}
+
+/* Định dạng các thành phần bên trong dropdown-details */
+.dropdown-details div {
+    margin: 5px;
+}
+.dropdown-details strong {
+    font-size: 18px;
+    color: #333333;
+    margin: 5px 0;
+}
+
+.dropdown-details p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #666666;
+    line-height: 1.5;
+}
+
+
+/* Khu vực chứa hình ảnh */
+.dropdown-image {
+    flex: 0.6; /* Chiếm 40% không gian */
+    text-align: center; /* Căn giữa ảnh */
+}
+
+.dropdown-image img {
+    width: 100%; /* Chiều rộng full */
+    height: auto; /* Tự động theo tỷ lệ */
+    border-radius: 5px; /* Bo góc */
+}
+
+/* Cart Container */
+.cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+#cart-icon {
+    font-size: 30px;
+    color: #333;
+}
+
+.cart-count {
+    position: absolute;
+    top: -17px;
+    right: -10px;
+    background-color: rgb(55, 214, 190);
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.cart-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-dropdown ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-dropdown img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-dropdown .cart-item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-dropdown .cart-item-details span {
+    font-size: 14px;
+}
+
+.cart-dropdown .cart-item-details .cart-item-price {
+    font-weight: bold;
+    color: #57e7d6;
+}
+
+.cart-total {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Show Cart Dropdown when hovering over cart icon */
+.cart-container:hover .cart-dropdown {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    header {
+        padding: 10px 30px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+
+    .user-menu ul a {
+        font-size: 14px;
+    }
+
+    .search-container input[type="search"] {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 10px 20px;
+    }
+
+    .search-container {
+        flex: 1;
+        max-width: 600px;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .user-menu ul a {
+        font-size: 10px;
+    }
+
+    nav ul li {
+        font-size: 10px;
+    }
+
+    .user-options {
+        margin-top: 10px;
+    }
+
+    .cart-container {
+        font-size: 28px;
+    }
+
+    .cart-dropdown {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: row;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        height: 25px;
+        /* Smaller logo for mobile */
+    }
+
+    .search-container input[type="search"] {
+        font-size: 12px;
+    }
+
+    nav ul li {
+        font-size: 8px;
+    }
+
+    nav ul a {
+        font-size: 8px;
+    }
+
+    .user-options i {
+        font-size: 18px;
+    }
+
+    .cart-container {
+        font-size: 15px;
+    }
+
+    .user-menu ul a {
+        font-size: 8px;
+    }
+
+    .cart-dropdown {
+        width: 100%;
+        padding: 5px;
+        margin-right: 100px;
+    }
+
+    .cart-dropdown ul li {
+        font-size: 70px;
+    }
+
+    .cart-dropdown .cart-item-details span {
+        font-size: 8px;
+    }
+
+    .cart-dropdown .cart-item-details .cart-item-price {
+        font-size: 8px;
+    }
+}
+
+
+/* Main Content and Image */
+.content {
+    text-align: center;
+    width: 100%;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Promotional Banner */
+h1 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    font-weight: normal;
+}
+
+/* Section Title */
+h1,
+p {
+    color: #45c0b5;
+    font-size: 28px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: #45c0b5;
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Carousel Container */
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 12%;
+    margin: 5px;
+    text-align: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    /* Chú ý: Thêm position relative để cho .sale hoạt động chính xác */
+}
+
+.product .content-product {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    /* Thay đổi thành relative để không bị chồng lên */
+    border-radius: 20px;
+}
+
+.product .sale {
+
+    color: #fff;
+
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    /* Đảm bảo nằm trên ảnh nhưng không che khuất */
+}
+
+.sale-text {
+    animation: pulse 2s infinite, blink 1s infinite;
+    transform-origin: center;
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        fill: white;
+    }
+
+    25%,
+    75% {
+        fill: yellow;
+    }
+}
+
+/* Hiệu ứng phóng to nhỏ */
+@keyframes pulse {
+
+    0%,
+    100% {
+        font-size: 15px;
+        transform: scale(1);
+    }
+
+    50% {
+        font-size: 18px;
+        transform: scale(1.2);
+    }
+}
+
+/* Product Image */
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: relative;
+    /* Đảm bảo ảnh không bị ảnh hưởng bởi các phần tử khác */
+}
+
+.product img:hover {
+    transform: scale(1.5);
+}
+
+/* Product Title */
+.product h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 12px 0;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+/* Button */
+.product button {
+    background-color: #45c0b5;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.product button:hover {
+    background-color: #c67709;
+    transition: background-color 0.3s;
+}
+
+.product button i {
+    margin-left: 20px;
+    transition: transform 0.2s ease;
+}
+
+.product button:hover i {
+    transform: translateX(30px);
+}
+
+/* Circle Indicators */
+.circle-container {
+    display: flex;
+    gap: 5px;
+    margin-left: 21px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.circle:nth-child(2) {
+    background-color: #4CAF50;
+    /* Màu xanh lá */
+}
+
+.circle:nth-child(3) {
+    background-color: #607D8B;
+    /* Màu xám */
+}
+
+.circle.plus {
+    background-color: #B0BEC5;
+    /* Màu xám sáng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Arrow Buttons */
+.arrow {
+    font-size: 50px;
+    cursor: pointer;
+    color: #45c0b5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 10px;
+}
+
+.arrow:hover {
+    color: #3aa59f;
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+
+/* Collection Layout */
+.collection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.collection-item {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.collection-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+    /* For tablets and smaller screens */
+    .product {
+        width: 20%;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* For tablets in portrait mode or small laptops */
+    .product {
+        width: 20%;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .arrow {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For mobile screens */
+    .carousel-container {
+        flex-direction: column;
+        padding: 0 10px;
+        /* Thêm padding để tránh sát cạnh màn hình */
+    }
+
+    .product {
+        width: 25%;
+        /* Card sẽ chiếm toàn bộ chiều ngang */
+        max-width: 20%;
+        /* Giới hạn chiều rộng tối đa */
+        margin: 0 auto;
+        /* Căn giữa card */
+        padding: 10px;
+    }
+
+    .product img {
+        width: 100%;
+        /* Đảm bảo hình ảnh không vượt quá chiều rộng */
+        height: auto;
+        /* Tự động điều chỉnh chiều cao */
+    }
+
+    .product button {
+        width: 80%;
+        /* Tự động điều chỉnh nút bấm nhỏ hơn */
+    }
+
+    .collection {
+        flex-direction: column;
+        /* Chuyển sang dạng cột */
+        gap: 10px;
+        /* Giảm khoảng cách giữa các item */
+        padding: 10px;
+        /* Thêm padding để không bị sát màn hình */
+    }
+
+    .collection-item img {
+        width: 100%;
+        /* Đảm bảo hình ảnh không vượt quá vùng chứa */
+        height: auto;
+        /* Điều chỉnh chiều cao tự động */
+    }
+}
+
+/* Điều hướng */
+/* Collection Navigation */
+.collection-navigation {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.collection-navigation h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #21a6b5;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+}
+.nav-links li {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.3s;
+    
+}
+.nav-links a {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.3s;
+    top: 7px;
+}
+
+/* Dấu mũi tên ẩn ban đầu */
+.nav-links a::before {
+    content: "\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateX(-5px);
+}
+
+/* Hiện dấu mũi tên khi rê chuột */
+.nav-links a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-links a:hover {
+    color: #d35400;
+}
+
+/* General Product List Styling */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    /* Ensure equal space between items */
+}
+
+/* Individual Product Styling */
+.product-list .products {
+    flex: 1 1 22%;
+    /* Use percentage for responsiveness */
+    max-width: 24%;
+    /* Maintain layout consistency */
+    text-align: center;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/* Hover Effect for Product */
+.product-list .products:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.product-list .products img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect on Image */
+.product-list .products img:hover {
+    transform: scale(1.2);
+    /* Slightly smaller scale to prevent overflow */
+    z-index: 1;
+}
+
+/* Content Styling */
+.product-list .products .content-product {
+    position: relative;
+    padding: 15px;
+    background-color: rgba(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+/* Product Title */
+.product-list .products .content-product h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 12px 0;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+
+/* Product Price Button */
+.product-list .products .content-product button {
+    background-color: #45c0b5;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s ease;
+    width: 90%;
+}
+
+/* Hover Effect for Product Button */
+.product-list .products .content-product button:hover {
+    background-color: #c67709;
+    transform: scale(1.1);
+}
+
+/* Sale Label */
+.product-list .products .sale {
+
+    color: #fff;
+
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products {
+        flex: 1 1 calc(50% - 20px);
+        /* 2 items per row on tablets and smaller screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        flex: 1 1 calc(100% - 20px);
+        /* 1 item per row on smaller screens (mobile phones) */
+        max-width: calc(100% - 20px);
+    }
+}
+
+/* Tick */
+.tick {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    gap: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.tick h2,
+.tick i {
+    margin: 0;
+    font-size: 25px;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.tick:hover {
+    background-color: #c16d00;
+    border-color: #c16d00;
+}
+
+.tick:hover h2,
+.tick:hover i {
+    font-size: 27px;
+    color: #fff;
+}
+
+.tick input {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+    /* For tablets and smaller screens */
+    .products {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .collection-navigation h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* For tablets in portrait mode or small laptops */
+    .products {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .collection-navigation h2 {
+        font-size: 18px;
+    }
+
+    .tick {
+        padding: 10px 15px;
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Product Item */
+        .product-list .products {
+            flex: 1 1 calc(25% - 20px);
+            /* Default: 4 items per row */
+            max-width: calc(25% - 20px);
+            /* Default: 4 items per row */
+            text-align: center;
+            padding: 15px;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            /* Thêm position relative để phần sale có thể được định vị chính xác */
+            background-color: #fff;
+        }
+
+        /* Hover Effect on Product Item */
+        .product-list .products:hover {
+            transform: translateY(-10px);
+            /* Tạo hiệu ứng dịch chuyển nhẹ khi hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            /* Tạo hiệu ứng đổ bóng khi hover */
+        }
+
+        /* Product Image */
+        .product-list .products img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            position: relative;
+            /* Đảm bảo ảnh không bị ảnh hưởng bởi các phần tử khác */
+        }
+
+        /* Hover Effect on Product Image */
+        .product-list .products img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Product Title */
+        .product-list .products h3 {
+            font-size: 16px;
+            color: #333;
+            margin: 12px 0;
+            line-height: 1.4;
+            font-weight: normal;
+        }
+
+        /* Product Button */
+        .product-list .products button {
+            background-color: #45c0b5;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s, transform 0.2s ease;
+            width: 90%;
+        }
+
+        /* Hover Effect on Product Button */
+        .product-list .products button:hover {
+            background-color: #c67709;
+            transform: scale(1.1);
+            /* Hiệu ứng phóng to nút khi hover */
+        }
+
+        /* Hover Effect on Icon inside Button */
+        .product-list .products button i {
+            margin-left: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .product-list .products button:hover i {
+            transform: translateX(30px);
+        }
+
+        /* Sale Label Positioning */
+        .product-list .products .sale {
+
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            position: absolute;
+            top: 16px;
+            left: 30px;
+            z-index: 10;
+            /* Đảm bảo phần sale luôn hiển thị trên cùng */
+        }
+    }
+
+    .tick h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For mobile screens */
+    .products {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .collection-navigation h2 {
+        font-size: 16px;
+    }
+
+    .tick {
+        width: 80%;
+        padding: 10px 15px;
+    }
+
+    .tick h2 {
+        font-size: 20px;
+    }
+}
+
+
+.chinhsach {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: #fefefe;
+    flex-wrap: wrap;
+    /* Cho phép phần tử gói lại khi không đủ không gian */
+}
+
+.baohanh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #e6f7f9;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    transition: transform 0.3s ease;
+    /* Thêm hiệu ứng chuyển động */
+}
+
+.baohanh h3,
+.baohanh h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.baohanh:hover {
+    background-color: #c8eef1;
+    transform: translateY(-5px);
+}
+
+.baohanh:hover i {
+    transform: scale(1.1);
+}
+
+.baohanh i {
+    font-size: 32px;
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+
+    /* For tablets and smaller screens */
+    .baohanh {
+        width: 30%;
+        /* Mỗi box chiếm 30% màn hình */
+    }
+
+    .chinhsach {
+        gap: 15px;
+        /* Khoảng cách giữa các phần tử */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* For small tablets or portrait mode */
+    .baohanh {
+        width: 45%;
+        /* Mỗi box chiếm 45% màn hình */
+    }
+
+    .chinhsach {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For mobile screens */
+    .baohanh {
+        width: 90%;
+        /* Mỗi box chiếm 100% chiều rộng */
+    }
+
+    .chinhsach {
+        gap: 10px;
+        /* Khoảng cách giữa các phần tử */
+        flex-direction: column;
+        /* Các phần tử xếp theo cột trên màn hình nhỏ */
+    }
+
+    .baohanh h3,
+    .baohanh h2 {
+        font-size: 14px;
+        /* Giảm kích thước chữ cho màn hình nhỏ */
+    }
+
+    .baohanh i {
+        font-size: 28px;
+        /* Giảm kích thước biểu tượng */
+    }
+}
+
+/* Horizontal line styling */
+
+.chonkinh {
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    /* Cho phép các phần tử xuống dòng khi cần */
+}
+
+.anh {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.anh img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.chonbenphai {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.chon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    flex: 1;
+}
+
+.chon:nth-child(1) {
+    border-color: #ff5722;
+}
+
+.chon:nth-child(2) {
+    border-color: #00bcd4;
+}
+
+.chon:nth-child(3) {
+    border-color: #ff9800;
+}
+
+.chon h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.chon h3 {
+    font-size: 14px;
+    color: #757575;
+}
+
+.chon i {
+    font-size: 40px;
+    color: #c07104;
+    transition: transform 0.3s ease;
+}
+
+.chon:hover {
+    color: #333;
+}
+
+.chon:nth-child(1):hover {
+    border-color: #ff5722;
+}
+
+.chon:nth-child(2):hover {
+    border-color: #00bcd4;
+}
+
+.chon:nth-child(3):hover {
+    border-color: #ff9800;
+}
+
+.chon:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+
+    /* For tablets and smaller screens */
+    .chonkinh {
+        flex-direction: column;
+        gap: 30px;
+        width: 80%;
+    }
+
+    .anh img {
+        max-width: 100%;
+        /* Đảm bảo ảnh chiếm toàn bộ chiều rộng khi màn hình nhỏ */
+    }
+
+    .chonbenphai {
+        flex: 1;
+        width: 100%;
+    }
+
+    .chon {
+        flex: 1 1 100%;
+        /* Mỗi phần tử .chon chiếm 100% chiều rộng */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* For small tablets or portrait mode */
+    .chonkinh {
+        gap: 20px;
+    }
+
+    .anh img {
+        max-width: 100%;
+    }
+
+    .chonbenphai {
+        flex: 1;
+        width: 100%;
+    }
+
+    .chon {
+        flex: 1 1 100%;
+        padding: 10px 15px;
+        /* Giảm padding trên màn hình nhỏ */
+    }
+
+    .chon h2 {
+        font-size: 16px;
+        /* Giảm kích thước font */
+    }
+
+    .chon h3 {
+        font-size: 12px;
+        /* Giảm kích thước font */
+    }
+
+    .chon i {
+        font-size: 30px;
+        /* Giảm kích thước icon */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For mobile screens */
+    .chonkinh {
+        gap: 15px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .anh img {
+        max-width: 100%;
+    }
+
+    .chonbenphai {
+        width: 100%;
+    }
+
+    .chon {
+        flex: 1 1 100%;
+        padding: 8px 10px;
+    }
+
+    .chon h2 {
+        font-size: 14px;
+    }
+
+    .chon h3 {
+        font-size: 10px;
+    }
+
+    .chon i {
+        font-size: 25px;
+    }
+}
+
+    .social-section {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Scroll container với flex và hạn chế chiều rộng */
+.social-scroll {
+  display: flex;
+  gap: 0; /* Loại bỏ khoảng cách giữa các box */
+  padding: 20px;
+  scroll-behavior: smooth; /* Mượt mà khi cuộn */
+  overflow-x: hidden; /* Ẩn scroll bar ngang */
+  justify-content: flex-start; /* Canh lề trái */
+}
+
+    /* Thiết lập cho mỗi item */
+    .social-item {
+      display: flex;
+      flex: 0 0 auto; /* Giữ cho các item không thay đổi kích thước */
+      align-items: center;
+      justify-content: space-between;
+      background: #dff9f9;
+      padding: 20px;
+      width: 100%;
+      max-width: 600px;
+      height: 390px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Các phần bên trái và phải */
+  /* Cải thiện phần chữ và nền */
+.social-item-left {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px; /* Bo góc nền */
+  color: darkcyan; /* Màu chữ trắng */
+  z-index: 1;
+  position: relative;
+}
+
+/* Định dạng tiêu đề */
+.social-item-left h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Tạo bóng cho chữ */
+  text-align: center;
+}
+
+/* Định dạng mô tả */
+.social-item-left h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Tạo bóng cho chữ */
+  text-align: center;
+}
+.p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    text-align: center;
+}
+    .social-item-right {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-item-right img {
+      width: 111.5%;
+      height: 111%;
+      object-fit: cover;
+      opacity: 0.5;
+      margin-top: 5px;
+      transition: opacity 0.5s ease;
+    }
+
+    .social-item-right img:hover {
+      opacity: 1;
+    }
+
+    /* Các text overlay */
+    .social-item-right h2,
+    .social-item-right p,
+    .social-item-right button {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      z-index: 2;
+    }
+
+    .social-item-right h2 {
+      top: 20%;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .social-item-right p {
+      top: 40%;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .social-item-right button {
+  top: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Khoảng cách giữa text và icon */
+  width: 80%; /* Chiều rộng của nút */
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #ff8040;
+  color: white;
+  border: none;
+  border-radius: 30px; /* Bo tròn nút */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 128, 64, 0.4); /* Bóng cho nút */
+}
+
+.social-item-right button:hover {
+  background: #ff9933;
+  box-shadow: 0 6px 15px rgba(255, 153, 51, 0.6); /* Bóng đổ khi hover */
+}
+
+.social-item-right button i {
+  font-size: 1rem; /* Kích thước icon */
+  background-color: #dff9f9;
+  padding: 10px;
+  border-radius: 50%; /* Bo tròn icon */
+  color:  #ff8040;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+/* Khi hover vào nút, icon xoay lên */
+.social-item-right button:hover i {
+  transform: rotate(-90deg); /* Xoay icon hướng lên trên */
+  background-color: #cdeff1; /* Thay đổi màu nền của icon */
+}
+
+  
+
+.blog-section {
+    padding: 20px;
+}
+
+.blog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.blog-header h1 {
+    font-size: 2rem;
+    color: #32cfc9;
+}
+
+.view-all {
+    background-color: #32cfc9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.view-all:hover {
+    background-color: rgb(187, 102, 11);
+    color: #000000;
+}
+
+.view-all i {
+    margin-left: 10px;
+}
+
+.blog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.blog-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.blog-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    height: 70%;
+}
+
+.blog-card h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.blog-card a {
+    color: #32cfc9;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.blog-card a i {
+    margin-left: 5px;
+}
+
+.blog-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .blog-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .view-all {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+
+    .blog-cards {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .blog-card img {
+        height: 60%;
+    }
+
+    .blog-card h2 {
+        font-size: 1rem;
+    }
+
+    .blog-card p {
+        font-size: 0.85rem;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .blog-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .view-all {
+        font-size: 0.8rem;
+        padding: 7px 15px;
+    }
+
+    .blog-cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .blog-card img {
+        height: 50%;
+    }
+
+    .blog-card h2 {
+        font-size: 0.9rem;
+    }
+
+    .blog-card p {
+        font-size: 0.8rem;
+    }
+}
+
+/* For very small screens (mobile portrait) */
+@media (max-width: 480px) {
+    .blog-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .view-all {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+    }
+
+    .blog-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-card img {
+        height: 50%;
+    }
+
+    .blog-card h2 {
+        font-size: 0.8rem;
+    }
+
+    .blog-card p {
+        font-size: 0.7rem;
+    }
+}
+
+
+footer {
+    background-color: #3dd2c1;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #000000;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 0.9em;
+    width: 180px;
+}
+
+.newsletter-form button {
+    padding: 10px 15px;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex: 2;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    line-height: 2;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-section ul li a:hover {
+    color: #000000;
+}
+
+.footer-section p,
+.footer-section a {
+    color: white;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.footer-section p:hover,
+.footer-section a:hover {
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+    color: #000000;
+}
+
+.footer-bottom img {
+    margin: 10px 0;
+    width: 120px;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-logo img {
+        max-width: 80px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-section {
+        text-align: center;
+        flex: 1;
+    }
+
+    .footer-bottom {
+        font-size: 0.8em;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .newsletter-form {
+        width: 90%;
+        align-items: center;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-section {
+        text-align: center;
+        flex: 1;
+    }
+
+    .footer-bottom {
+        font-size: 0.75em;
+    }
+}
+
+/* For very small screens (mobile portrait) */
+@media (max-width: 480px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo img {
+        max-width: 60px;
+    }
+
+    .footer-logo p {
+        font-size: 0.8em;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-section {
+        text-align: center;
+        flex: 1;
+    }
+
+    .footer-bottom {
+        font-size: 0.7em;
+    }
+}
+
+/* General styling for the blog section */
+.blog {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next line if needed */
+}
+
+.img-blog {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+}
+
+.img-blog .img2 {
+    margin-top: 100px;
+}
+
+.blog h1 {
+    margin: auto;
+    text-align: center;
+}
+
+/* Blog layout with image and text in a flexbox container */
+.blog1 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.blog1 h1 {
+    margin: auto;
+    text-align: center;
+}
+
+.blog2 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.blog2 .p-blog span {
+    text-align: center;
+    font-size: 19.6px;
+}
+
+.blog2 .img3 {
+    width: 300%;
+}
+
+.blog2 .img3 img {
+    width: 100%;
+}
+
+.blog2 p {
+    width: 60%;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.fl-blog h1,
+.fl-blog h3 {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(44, 161, 144);
+}
+
+/* Container for the slider */
+.slider {
+    margin-top: 70px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.slide {
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    width: 20%;
+    text-decoration: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 70%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom in when hovered or focused */
+.slide:focus img,
+.slide:hover img {
+    transform: scale(1.2);
+    /* Zoom in the image 1.2 times */
+}
+
+.slide:focus {
+    outline: none;
+}
+
+.slide p {
+    font-size: 30px;
+    color: rgb(44, 161, 144);
+}
+
+/* General styling for the blog content */
+.blog-main {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-main h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Flex container for blog post image and text */
+.blog-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.imgblog {
+    width: 30%;
+}
+
+.imgblog img {
+    width: 100%;
+    /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+/* Link styling */
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Blog post content styling */
+.bl-blog {
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+}
+
+/* Blog post title */
+.bl-blog h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Date styling */
+.bl-blog p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Link styling for blog post */
+.bl-blog a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Hover effect for the link */
+.bl-blog a:hover {
+    color: #0056b3;
+}
+
+/* Arrow icon styling */
+.bl-blog a i {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+
+    /* Adjust layout for large tablets or small desktop screens */
+    .blog {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .blog1,
+    .blog2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-blog {
+        gap: 15px;
+    }
+
+    .img3 {
+        display: none;
+    }
+
+    .slider {
+        gap: 15px;
+        justify-content: flex-start;
+    }
+
+    .slide {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* For tablets and large mobile devices */
+    .blog {
+        width: 95%;
+    }
+
+    .blog1,
+    .blog2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .blog2 p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .slider {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .slide {
+        width: 70%;
+    }
+
+    .slide p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For mobile devices */
+    .blog {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .img-blog {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .blog1,
+    .blog2 {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .blog2 p {
+        font-size: 14px;
+    }
+
+    .slider {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .slide {
+        width: 90%;
+    }
+
+    .slide p {
+        font-size: 20px;
+    }
+
+    .slide img {
+        height: auto;
+    }
+}
+
+.original-price {
+
+    color: gray;
+    margin-right: 8px;
+}
+
+.sale-price {
+    color: rgb(3, 145, 150);
+    font-weight: bold;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/admin/views/assets/css/block.css">
+    <link rel="stylesheet" href="/admin/views/assets/css/addsanpham.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+            <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>Quản lý</h1>
+                <a href=""><img style="filter: brightness(500%);" src="/public/upload/imgs/Banner_Logo/2handstore/auraglam.png"
+                            alt="Logo" width="150px 150px"></a>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="/trangchu.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                <li><a href="user.html"><i class="fa-solid fa-user"></i> Người dùng</a></li>
+                <li><a href="/danhmuc.html"><i class="fa-solid fa-list"></i> Danh mục</a></li>
+                <li><a href="/sanpham.html"><i class="fa-brands fa-product-hunt"></i> Sản phẩm</a></li>
+                <li><a href="./"><i class="fa-solid fa-truck-fast"></i> Đơn hàng</a></li>
+                <li><a href="./"><i class="fa-solid fa-ticket"></i> Voucher</a></li>
+                <li><a href="blog.html"><i class="fa-solid fa-blog"></i> Bài viết</a></li>
+                <li><a href="danhgia.html"><i class="fa-solid fa-comment"></i> Đánh giá</a></li>
+                <li><a href="#"><i class="fa-solid fa-rotate-left"></i> Quay về trang web</a></li>
+            </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="form-container">
+                <h2>Cập nhật thêm sản phẩm</h2>
+                <form action="update_product.php" method="POST" enctype="multipart/form-data">
+                    <!-- Product Name -->
+                    <div class="form-group">
+                        <label for="productName">Tên Sản phẩm</label>
+                        <input type="text" id="productName" name="productName" value="Product A" required>
+                    </div>
+
+                    <!-- Product Price -->
+                    <div class="form-group">
+                        <label for="productPrice">Giá</label>
+                        <input type="number" id="productPrice" name="productPrice" value="100000" required>
+                    </div>
+
+                    <!-- Product Category -->
+                    <div class="form-group">
+                        <label for="productCategory">Danh Mục</label>
+                        <select id="productCategory" name="productCategory" required>
+                            <option value="electronics" selected>Quần Áo Nam</option>
+                            <option value="fashion">Quần Áo Nữ</option>
+                            <option value="home_appliances">Unisex</option>
+                            <option value="books">Quần Áo Trẻ Em</option>
+                        </select>
+                    </div>
+
+                    <!-- Product Image -->
+                    <div class="form-group">
+                        <label for="productImage">Hình ảnh</label>
+                        <input type="file" id="productImage" name="productImage" accept="image/*">
+                    </div>
+
+                    <!-- Product Description -->
+                    <div class="form-group">
+                        <label for="productDescription">Mô Tả</label>
+                        <textarea id="productDescription" name="productDescription" rows="4" required>Đây là một sản phẩm rất tốt.</textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn">Thêm Sản Phẩm</button>
+                    <button type="reset" class="btn btn-danger">Hủy</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

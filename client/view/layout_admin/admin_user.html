@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/client/public/assets/css/block.css">
+    <link rel="stylesheet" href="/client/public/assets/css/layout.css">
+    <style>
+        /* Tổng thể trang */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Thanh header */
+        header {
+            background-color: #00accf;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Phần nội dung */
+        .main-content {
+            padding: 30px;
+        }
+
+        .content {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+
+        /* Nút Thêm Sản Phẩm */
+        .content .btn-add {
+            background-color: #02b8cc;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Nút Thao tác (Sửa, Xóa) */
+        .btn {
+            background-color: #02b8cc;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn a {
+
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0704d1;
+            transform: translateY(-2px);
+        }
+
+        /* Nút Sửa */
+        .btn-edit {
+            background-color: #02b8cc;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-edit:hover {
+            background-color: #0704d1;
+            transform: translateY(-2px);
+        }
+
+        /* Nút Xóa */
+        .btn-danger {
+            background-color: #dc3545;
+            transition: background-color 0.3s;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
+        }
+
+        /* Bảng */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        th a {
+            text-decoration: none;
+            color: #555;
+        }
+
+        th {
+            background-color: #f1f1f1;
+            color: #555;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Hình ảnh sản phẩm */
+        td img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Responsive: làm cho bảng hiển thị đẹp trên thiết bị di động */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .btn-add {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Tạo kiểu hiệu ứng cho các nút khi di chuột */
+        .btn:active,
+        .btn-edit:active,
+        .btn-danger:active {
+            transform: translateY(1px);
+        }
+
+        /* Container chung */
+        #pagination {
+            display: flex;
+            justify-content: right;
+            /* Canh giữa thanh phân trang */
+            align-items: center;
+            margin-top: 20px;
+            gap: 5px;
+            /* Khoảng cách giữa các phần tử */
+        }
+
+        /* Style chung cho các nút phân trang */
+        #pagination .page {
+            display: inline-block;
+            padding: 10px 20px;
+            /* Tăng padding để các nút đồng đều hơn */
+            font-size: 1rem;
+            /* Kích thước chữ đồng nhất */
+            color: #007bff;
+            /* Màu chữ */
+            text-decoration: none;
+            /* Bỏ gạch chân */
+            border: 1px solid #ddd;
+            /* Viền nhẹ */
+            border-radius: 5px;
+            /* Bo góc nhẹ */
+            background-color: #f9f9f9;
+            /* Màu nền */
+            transition: all 0.3s ease;
+            /* Hiệu ứng hover */
+        }
+
+        /* Nút hover */
+        #pagination .page:hover {
+            background-color: #007bff;
+            /* Đổi màu nền khi hover */
+            color: #fff;
+            /* Màu chữ khi hover */
+            border-color: #007bff;
+            /* Đổi màu viền khi hover */
+        }
+
+        /* Nút active (đang được chọn) */
+        #pagination .page.active {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+            cursor: default;
+            pointer-events: none;
+            /* Vô hiệu hóa hành động nhấp */
+        }
+
+        /* Nút đầu tiên và cuối cùng */
+        #pagination .page.first,
+        #pagination .page.last {
+            font-weight: bold;
+            /* Làm đậm chữ */
+        }
+
+        /* Nút trước và sau */
+        #pagination .page.prev,
+        #pagination .page.next {
+            font-size: 1.1rem;
+            /* Tăng kích thước một chút */
+        }
+
+        /* Nút bị vô hiệu hóa */
+        #pagination .page.disabled {
+            color: #ccc;
+            background-color: #f9f9f9;
+            border-color: #ddd;
+            pointer-events: none;
+            /* Không cho phép nhấp */
+        }
+
+        /* Đảm bảo các phần tử trong thanh phân trang không bị kéo dài */
+        #pagination {
+            flex-wrap: wrap;
+            /* Tự động xuống dòng nếu không đủ chỗ */
+        }
+
+        [disabled] {
+            cursor: not-allowed;
+            pointer-events: none;
+            /* Không cho phép nhấp */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>Quản lý</h1>
+                <a href="/client/view/layout_admin/admin.html"><img style="filter: brightness(500%);"
+                        src="/client/public/img/Sunny.png" alt="Logo" width="100px 100px"></a>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="/client/view/layout_admin/admin.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                <li><a href="/client/view/layout_admin/admin_user.html"><i class="fa-solid fa-user"></i> Người dùng</a></li>
+                <li><a href="/client/view/layout_admin/admin_category.html"><i class="fa-solid fa-list"></i> Danh mục</a></li>
+                <li><a href="/client/view/layout_admin/admin_product.html"><i class="fa-brands fa-product-hunt"></i> Sản
+                        phẩm</a></li>
+                <li><a href="/client/view/layout_admin/admin_cart.html"><i class="fa-solid fa-truck-fast"></i> Đơn hàng</a>
+                </li>
+                <li><a href="/client/view/layout_admin/admin_blog.html"><i class="fa-solid fa-blog"></i> Bài viết</a></li>
+                <li><a href="/client/view/layout_admin/admin_comment.html"><i class="fa-solid fa-comment"></i> Đánh giá</a>
+                </li>
+                <li><a href="/client/index.html"><i class="fa-solid fa-rotate-left"></i> Quay về trang
+                        web</a></li>
+            </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content" id="body">
+
+            <header>
+                <h1>Quản lý Người dùng</h1>
+            </header>
+            <div class="content">
+                <button class="btn btn-add"><a href="/client/view/layout_admin/admin_useradd.html">Tạo tài khoản</a></button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th><a href="" id="sort-by-name">Tên Người dùng</a></th>
+                            <th><a href="" id="sort-by-email">Email</a></th>
+                            <th><a href="">Password</a></th>
+                            <th><a href="" id="sort-by-email">Vai trò</a></th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Danh sách người dùng -->
+                        <tr>
+                            <td>1</td>
+                            <td>Bảo le</td>
+                            <td>baolcps41487@gmail.com</td>
+                            <td>*************</td>
+                            <td>admin</td>
+                            <td>
+                                <button class="btn btn-edit">
+                                    <a href="/client/view/layout_admin/admin_userupdate.html">Sửa</a>
+                                </button>
+                                <a data-id="${user.id}" class="btn btn-danger" data-name="${user.name}">Xóa</a>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>2</td>
+                            <td>Chí Tươi</td>
+                            <td>bao123lacao</td>
+                            <td>*************</td>
+                            <td>người dùng</td>
+                            <td>
+                                <button class="btn btn-edit">
+                                    <a href="/client/view/layout_admin/admin_userupdate.html">Sửa</a>
+                                </button>
+                                <a data-id="${user.id}" class="btn btn-danger" data-name="${user.name}">Xóa</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="pagination">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>

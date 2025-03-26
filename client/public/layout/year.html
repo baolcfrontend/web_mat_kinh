@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/cssHome.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Cart Dropdown */
+.cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#cart-icon {
+    font-size: 30px;
+    color: #333;
+}
+
+.cart-count {
+    position: absolute;
+  top: -17px;
+    background-color: #ff5c5c;
+    color: white;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.cart-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-dropdown ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-dropdown img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-dropdown .cart-item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-dropdown .cart-item-details span {
+    font-size: 14px;
+}
+
+.cart-dropdown .cart-item-details .cart-item-price {
+    font-weight: bold;
+    color: #57e7d6;
+}
+
+.cart-total {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Show Cart Dropdown when hovering over cart icon */
+.cart-container:hover .cart-dropdown {
+    display: block;
+}
+
+   </style>
+</head>
+<body>
+     <header>
+        <!-- Logo -->
+        <a href="?page/home"> <img src="/public/img/Sunny.png" alt="Anna Logo" class="logo"></a>
+
+        <div class="user-options">
+            <!-- Product Dropdown -->
+            <div class="user-menu">
+                <ul><a href="?page/product">Sản Phẩm</a></ul>
+                <ul class="user-dropdown">
+                    <li>Gọng Kính</li>
+                    <li>Kính Râm</li>
+                    <li>Kính Trẻ em</li>
+                </ul>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="search" placeholder="tìm gọng kính, kính râm...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="?page/about">Giới Thiệu</a></li>
+                <li><a href="?page/blog">Bài Viết</a></li>
+                <li><a href="?page/contact">Liên Hệ</a></li>
+                <li><a href="?user/login">Đăng Nhập</a></li>
+                <li><a href="?user/register">Đăng Kí</a></li>
+            </ul>
+        </nav>
+
+    <!-- Cart Icon with Dropdown -->
+    <div class="cart-container">
+        <a href="?page/cart"> <i class="fas fa-shopping-cart"></i></a>
+        <span id="cart-count" class="cart-count">0</span>
+        <!-- Dropdown menu for cart -->
+        <div class="cart-dropdown" id="cart-dropdown">
+            <ul id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <div class="cart-total">
+                <span>Tổng Tiền: <strong id="cart-total">0</strong> VND</span>
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+    // Sample cart data
+let cart = [
+    {
+        id: 1,
+        name: "GK. GỌNG VIỀN NHỰA TITAN CAO CẤP",
+        price: 1600000,
+        img: "ghi-3.jpeg",
+        quantity: 2
+    },
+    {
+        id: 2,
+        name: "GK. GỌNG NHỰA CỨNG AN086",
+        price: 800000,
+        img: "ghi-5.jpeg",
+        quantity: 1
+    }
+];
+
+// Function to update the cart display
+function updateCart() {
+    const cartCount = document.getElementById("cart-count");
+    const cartDropdown = document.getElementById("cart-dropdown");
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    // Clear current cart items
+    cartItems.innerHTML = "";
+
+    let total = 0;
+    let itemCount = 0;
+
+    cart.forEach(item => {
+        total += item.price * item.quantity;
+        itemCount += item.quantity;
+
+        const cartItem = document.createElement("li");
+        cartItem.innerHTML = `
+            <img src="./public/img/${item.img}">
+            <div class="cart-item-details">
+                <span>${item.name}</span>
+                <span class="cart-item-price">${item.price * item.quantity} VND</span>
+                <span>Quantity: ${item.quantity}</span>
+            </div>
+        `;
+        cartItems.appendChild(cartItem);
+    });
+
+    // Update cart count and total price
+    cartCount.textContent = itemCount;
+    cartTotal.textContent = total;
+}
+
+// Call the function to update the cart on page load
+updateCart();
+
+</script>
+</body>
+</html>

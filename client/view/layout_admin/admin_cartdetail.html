@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Đơn Hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #00accf;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Điều chỉnh phần content */
+        .content {
+            padding: 20px;
+            background-color: #fff;
+            max-width: 900px;
+            /* Giới hạn chiều rộng */
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Chia phần thông tin thành 2 cột */
+        .order-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .order-details .info-left,
+        .order-details .info-right {
+            flex: 1;
+            min-width: 280px;
+            /* Đảm bảo mỗi cột không nhỏ hơn */
+
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fafafa;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tiêu đề cột */
+        h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Thông tin chi tiết khách hàng */
+        .info-left h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .info-left p {
+            font-size: 14px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* Thông tin chi tiết sản phẩm */
+        .info-right h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f1f1f1;
+        }
+
+        td {
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+
+        .status {
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Button Styles */
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 48%;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-danger {
+            background-color: #f44336;
+        }
+
+        .btn-danger:hover {
+            background-color: #d32f2f;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn a {
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            text-decoration: none;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="content">
+        <header>
+            <h1>Chi Tiết Đơn Hàng</h1>
+        </header>
+
+        <div class="order-details">
+            <div class="info-left">
+                <h2>Thông tin khách hàng</h2>
+                <p><strong>Họ và tên:</strong> <span class="firstName">Lê Chí Bảo</span></p>
+                <p><strong>Số điện thoại:</strong> <span class="phone">0338538203</span></p>
+                <p><strong>Địa chỉ:</strong> <span class="address">1371 phan văn trị</span></p>
+                <p><strong>Ghi chú đơn hàng:</strong> <span class="orderNotes">Giao nhanh giúp em</span></p>
+                <p><strong>Phương thức thanh toán:</strong> <span class="paymentMethod">Tiền mặt</span></p>
+            </div>
+
+            <div class="info-right">
+                <h2>Chi tiết sản phẩm</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tên sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Giá</th>
+                            <th>Tổng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Các dòng sản phẩm sẽ được thêm vào đây thông qua JS -->
+                         <tr>
+                            <td>Kính</td>
+                            <td>2</td>
+                            <td>100.000đ</td>
+                            <td>200.000đ</td>
+                         </tr>
+                         <tr>
+                            <td>Tròng</td>
+                            <td>3</td>
+                            <td>50.000đ</td>
+                            <td>150.000đ</td>
+                         </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Thông tin tổng tiền và trạng thái -->
+        <p><strong>Tổng tiền:</strong> <span class="total-price">350.000 đ</span></p>
+        <p><strong>Trạng thái:</strong> <span class="order-status"> đang giao hàng</span></p>
+
+        <div class="button-group">
+            <button class="btn"><a href="/client/view/layout_admin/admin_cart.html">Quay lại danh sách</a></button>
+
+        </div>
+
+    </div>

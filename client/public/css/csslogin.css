@@ -1,0 +1,232 @@
+/* Auth container */
+.auth-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 90%;
+    overflow: hidden;
+    margin-top: 100px;
+    margin-left: 150px;
+    flex-wrap: wrap; /* Allow elements to stack on smaller screens */
+}
+
+/* Auth image */
+.auth-container img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Form container */
+.form-container {
+    margin-left: 30px;
+    flex: 1;
+    min-width: 300px; /* Prevents form from getting too narrow */
+}
+
+/* Heading */
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields */
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-container input:focus {
+    border-color: #45c0b5;
+}
+
+/* Submit button */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #45c0b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #009688;
+}
+
+/* Remember me checkbox */
+.form-container .remember-me {
+    margin: 10px 0;
+}
+
+.form-container .remember-me label {
+    font-size: 14px;
+}
+
+.form-container .remember-me input[type="checkbox"] {
+    width: 20px;
+    margin: auto;
+}
+
+/* Forgot password link */
+.form-container .forgot-password {
+    color: #45c0b5;
+    font-size: 14px;
+    text-align: right;
+    text-decoration: none;
+}
+
+.form-container .forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Google login button */
+.form-container .google-login {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.form-container .google-login i {
+    margin-right: 10px;
+}
+
+/* Register link */
+.form-container .register-link {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #45c0b5;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container .register-link p {
+    font-size: 16px;
+    color: black;
+}
+
+.form-container .register-link a {
+    color: #45c0b5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-container .register-link a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-container .register-link p {
+    margin-top: 10px;
+    color: #333;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+
+/* Medium-sized devices (e.g., tablets) */
+@media (max-width: 768px) {
+    .auth-container {
+        margin-left: 10%;
+        margin-top: 100px;
+        padding: 20px;
+        flex-direction: column; /* Stack image and form vertically */
+    }
+
+    .auth-container img {
+      display: none;
+    }
+
+    .form-container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    .form-container input,
+    .form-container button {
+        font-size: 14px; /* Slightly smaller text on mobile */
+    }
+
+    .form-container .remember-me label,
+    .form-container .forgot-password {
+        font-size: 12px;
+    }
+
+    .form-container .google-login {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-container .register-link p {
+        font-size: 12px;
+    }
+}
+
+/* Small-sized devices (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .auth-container {
+        margin-left: 10%;
+        margin-top: 100px;
+        padding: 15px;
+    }
+
+    
+
+    .form-container input,
+    .form-container button {
+        font-size: 13px; /* Adjust font size for mobile */
+        padding: 8px;
+    }
+
+    .form-container h2 {
+        font-size: 18px;
+    }
+
+    .form-container .remember-me label,
+    .form-container .forgot-password {
+        font-size: 12px;
+    }
+
+    .form-container .google-login {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .form-container .register-link p {
+        font-size: 11px;
+    }
+}

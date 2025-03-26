@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/client/public/assets/css/block.css">
+  <link rel="stylesheet" href="/client/public/assets/css/layout.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Content Area */
+    .content {
+      padding: 20px;
+      background-color: #fff;
+      max-width: 900px;
+      margin: 30px auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Button Styles */
+    .btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .btn:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+    .btn-danger {
+      background-color: #f44336;
+    }
+
+    .btn-danger:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Wrapper Styles */
+    .form-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fafafa;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form Styles */
+    .update-status {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .update-status h2 {
+      margin-bottom: 15px;
+    }
+
+    .update-status p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .update-status label {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    #order-status {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    /* Layout Adjustments for Button Group */
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Hide Update Form by Default */
+
+
+    /* Styling for 'Danh Sách Đơn Hàng' button */
+    #back-to-orders {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1>Quản lý</h1>
+        <a href="/client/view/layout_admin/admin.html"><img style="filter: brightness(500%);" src="/client/public/img/Sunny.png"
+            alt="Logo" width="100px 100px"></a>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="/client/view/layout_admin/admin.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+        <li><a href="/client/view/layout_admin/admin_user.html"><i class="fa-solid fa-user"></i> Người dùng</a></li>
+        <li><a href="/client/view/layout_admin/admin_category.html"><i class="fa-solid fa-list"></i> Danh mục</a></li>
+        <li><a href="/client/view/layout_admin/admin_product.html"><i class="fa-brands fa-product-hunt"></i> Sản phẩm</a></li>
+        <li><a href="/client/view/layout_admin/admin_cart.html"><i class="fa-solid fa-truck-fast"></i> Đơn hàng</a></li>
+        <li><a href="/client/view/layout_admin/admin_blog.html"><i class="fa-solid fa-blog"></i> Bài viết</a></li>
+        <li><a href="/client/view/layout_admin/admin_comment.html"><i class="fa-solid fa-comment"></i> Đánh giá</a></li>
+        <li><a href="/client/index.html"><i class="fa-solid fa-rotate-left"></i> Quay về trang web</a></li>
+      </ul>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content" id="body">
+
+      <header>
+        <h1>Cập nhật Đơn Hàng</h1>
+      </header>
+
+      <div class="content">
+        <button class="btn" id="back-to-orders">Danh Sách Đơn Hàng</button>
+
+        <!-- Wrapper for form -->
+        <form id="updateOrderForm">
+          <div class="form-wrapper">
+            <div class="update-status">
+              <h2>Cập nhật trạng thái đơn hàng</h2>
+              <p>Đơn hàng ID: <span id="order-id"></span></p>
+
+              <label for="order-status">Trạng thái:</label>
+              <select id="order-status">
+                <option value="Đang chờ xử lý">Đang chờ xử lý</option>
+                <option value="Đang giao hàng">Đang giao hàng</option>
+                <option value="Đã giao hàng">Đã giao hàng</option>
+                <option value="Đã hủy">Đã hủy</option>
+              </select>
+
+              <div class="button-group">
+                <button id="update-status-button" type="submit" class="btn">Cập Nhật Trạng Thái</button>
+                <button id="cancel-update-button" class="btn btn-danger">Hủy</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

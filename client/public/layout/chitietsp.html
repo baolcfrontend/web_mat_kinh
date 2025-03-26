@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyeglasses Product Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/public/css/cssHome.css">
+<link rel="stylesheet" href="/public/css/csschitietsp.css">
+</head>
+
+<body>
+ <header>
+        <!-- Logo -->
+     <a href="?page/home">  <img src="/public/img/Sunny.png" alt="Anna Logo" class="logo"></a>
+
+        <div class="user-options">
+            <!-- Product Dropdown -->
+            <div class="user-menu">
+                <ul>Sản Phẩm</ul>
+                <ul class="user-dropdown">
+                    <li>Gọng Kính</li>
+                    <li>Kính Râm</li>
+                    <li>Kính Trẻ em</li>
+                </ul>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="search" placeholder="tìm gọng kính, kính râm...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="">Giới Thiệu</a></li>
+                <li><a href="">Bài Viết</a></li>
+                <li><a href="?page/contact">Liên Hệ</a></li>
+                <li><a href="?page/user">Đăng Nhập</a></li>
+                <li><a href="">Đăng Kí</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Cart Icon -->
+        <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+  <div class="product-container">
+      <div class="product-image">
+    <!-- Main product image with id for JavaScript targeting -->
+    <img id="main-image" src="/public/img/ghi-5.jpeg" alt="Glasses" />
+
+    <!-- Thumbnail images -->
+    <div class="thumbnail-container">
+      <img src="/public/img/ghi-5.jpeg" alt="Thumbnail 1" onclick="changeImage('/public/img/ghi-5.jpeg')" />
+      <img src="/public/img/ghi-3.jpeg" alt="Thumbnail 2" onclick="changeImage('/public/img/ghi-3.jpeg')" />
+      <img src="/public/img/ghi-4.jpeg" alt="Thumbnail 3" onclick="changeImage('/public/img/ghi-4.jpeg')" />
+      <img src="/public/img/ghi-6.jpeg" alt="Thumbnail 3" onclick="changeImage('/public/img/ghi-6.jpeg')" />
+    </div>
+  </div>
+    <div class="product-details">
+      <h1>GK. Gọng Viền Nhựa Titanium Cao Cấp</h1>
+      <p class="product-code">NA240212 (50.19.148)</p>
+      <p class="price">Giá: 1.600.000₫</p>
+      <p class="total-price">Tổng Giá: <span id="total-price">1.600.000₫</span></p>
+
+      <div class="color-options">
+        <label for="colors">Màu Sắc:</label>
+        <select id="colors">
+          <option value="black">Đen</option>
+          <option value="gray">Trắng</option>
+          <option value="yellow">Trong suốt</option>
+        </select>
+      </div>
+
+      <div class="quantity">
+        <label for="quantity">Số lượng :</label>
+        <button id="decrease">-</button>
+        <input id="quantity" value="1" min="1" />
+        <button id="increase">+</button>
+
+
+        <button class="add-to-cart">Thêm vào giỏ</button>
+      </div>
+
+     
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="success-modal">
+    <h2>Thành công!</h2>
+    <p>Sản phẩm đã được thêm vào giỏ hàng.</p>
+  </div>
+  <div class="mota">
+    <h3 onclick="toggleDescription()">Thông tin <i class="fa-solid fa-plus" id="toggle-icon"></i></h3>
+    <div class="description-content" id="description">
+      <h7><strong>Tên sản phẩm:</strong> GK. GỌNG NHỰA TITAN CAO CẤP NA240215 (47.21.150)</h7><br>
+      <h7><strong>Mã sản phẩm:</strong> NA240215</h7><br>
+      <h7><strong>Mô tả:</strong> Gọng kính nhựa titan cao cấp NA240215 kết hợp chất liệu nhựa cao cấp và titan, mang lại
+        sự nhẹ nhàng, bền bỉ và phong cách hiện đại...</h7>
+      <h7><strong>Kích thước:</strong></h7>
+      <ul>
+        <li>Chiều rộng tròng kính: 47mm</li>
+        <li>Cầu kính: 21mm</li>
+        <li>Chiều dài càng kính: 150mm</li>
+      </ul>
+      <h7><strong>Đặc điểm nổi bật:</strong> Cầu kính titan: Đảm bảo độ bền, nhẹ và chống gỉ, làm tăng giá trị và vẻ đẹp
+        của gọng kính...</h7>
+      <h7><strong>Ứng dụng:</strong> Gọng kính nhựa titan cao cấp NA240215 thích hợp cho các hoạt động hàng ngày...</h7>
+      <h7><strong>Lưu ý khi sử dụng:</strong></h7>
+      <ul>
+        <li>Tránh va đập mạnh để bảo vệ gọng kính khỏi hư hại.</li>
+        <li>Lau kính bằng khăn mềm để giữ bề mặt kính sạch sẽ và không bị trầy xước.</li>
+        <li>Bảo quản kính trong hộp khi không sử dụng để tránh bụi bẩn và hư hỏng.</li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <div class="mota">
+    <h3>Vận chuyển - Đổi trả</h3> <br> <br>
+    <h7>Thời gian giao hàng dao động từ 2-4 ngày đối với đơn gọng kính, 3-5 ngày đối với đơn cắt cận.</h7> <br> <br>
+    <h7>1. Bảo hành 1 đổi 1 trong 180 ngày sau khi mua hàng nếu lớp váng dầu của tròng kính gặp vấn đề về kỹ thuật như xô
+      váng, mất váng mà không phải do nhiệt hay tác động vật lý như trầy xước, nứt, vỡ.</h7> <br> <br>
+  <h7>2. Anna bảo hành cho cả lỗi người dùng nếu không may làm gẫy hoặc mất kính. Trợ giá 50% giá niêm yết khi khách
+      hàng sử dụng lại sản phẩm cũ. Trong trường hợp sản phẩm cũ hết hàng có thể thay thế sang sản phẩm có giá trị bằng
+      hoặc thấp hơn. Áp dụng 1 lần duy nhất trên tổng hóa đơn trong 60 ngày kể từ khi mua hàng</h7>
+  </div>
+ <br> <br>
+ <div class="chinhsach">
+        <hr>
+        <div class="baohanh">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Bảo hành trọn đời</h3>
+        </div>
+        <div class="baohanh">
+            <i class="fa-solid fa-calendar-alt"></i>
+            <h3>Đo mắt miễn phí</h3>
+        </div>
+        <div class="baohanh">
+            <i class="fa-solid fa-lock"></i>
+            <h2>Thu cũ đổi mới</h2>
+        </div>
+        <div class="baohanh">
+            <i class="fa-solid fa-tag"></i>
+            <h2>Vệ sinh và bảo quản kính</h2>
+            <hr>
+        </div>
+        <hr>
+    </div>
+  <h1>TRÒNG KÍNH BỖ TRỢ</h1>
+
+    <!-- Carousel with Products -->
+    <div class="carousel-container">
+        <span class="arrow left" onclick="moveCarousel(-1)">&#8592;</span> <!-- Left arrow -->
+        <div class="carousel">
+            <div class="product">
+                <img src="/public/img/trong1.jpeg" alt="GK. GỌNG VIỀN NHỰA TITAN CAO CẤP">
+                <h3>Tròng kính Optical Chiết suất 1.56</h3>
+               <button>Liên hệ ngay <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong2.jpeg" alt="Product 2">
+                <h3>Tròng kính Chemi U2 Chiết suất 1.67</h3>
+                <button>Liên hệ ngay<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong3.jpeg" alt="Product 3">
+                <h3>Tròng kính Erizal Chiết suất 1.56</h3>
+                <button>Liên hệ ngay <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong4.jpeg" alt="Product 4">
+                <h3>Tròng kính Elements</h3>
+                <button>Liên hệ ngay <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong1.jpeg" alt="GK. GỌNG VIỀN NHỰA TITAN CAO CẤP">
+                <h3>Tròng kính Optical Chiết suất 1.56</h3>
+                <button>Liên hệ ngay <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong2.jpeg" alt="Product 2">
+                <h3>Tròng kính Chemi U2 Chiết suất 1.67</h3>
+                <button>Liên hệ ngay <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong3.jpeg" alt="Product 3">
+                <h3>Tròng kính Essilor Chiết suất 1.56</h3>
+                <button>Liên hệ ngay<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong4.jpeg" alt="Product 4">
+                <h3>Tròng kính Elements</h3>
+                <button>Liên hệ ngay<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong1.jpeg" alt="GK. GỌNG VIỀN NHỰA TITAN CAO CẤP">
+                <h3>Tròng kính Bevis Optical Chiết suất 1.56</h3>
+                <button>Liên hệ ngay<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong3.jpeg" alt="Product 2">
+                <h3>Tròng kính Chemi U2 Chiết suất 1.67</h3>
+                <button>Liên hệ ngay<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong2.jpeg" alt="Product 3">
+                <h3>Tròng kính Essilor Chiết suất 1.56</h3>
+                <button>Liên hệ ngay<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="product">
+                <img src="/public/img/trong4.jpeg" alt="Product 4">
+                <h3>Tròng kính Elements</h3>
+                <button>Liên hệ ngay<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <span class="arrow right" onclick="moveCarousel(1)">&#8594;</span> <!-- Right arrow -->
+    </div>
+    <h1>Sản Phẩm Tương Tự</h1>
+    <div class="product-list">
+        <div class="products">
+            <img src="/public/img/ghi-5.jpeg" alt="GK. GỌNG VIỀN NHỰA TITAN CAO CẤP">
+            <h3>GK. GỌNG VIỀN NHỰA TITAN CAO CẤP</h3>
+            <button>1,600,000đ <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="products">
+            <img src="/public/img/ghi-5.jpeg" alt="Product 2">
+            <h3>GK. GỌNG NHỰA CỨNG AN086</h3>
+            <button>800,000đ <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="products">
+            <img src="/public/img/ghi-5.jpeg" alt="Product 3">
+            <h3>GK. GỌNG CỐT KIM LOẠI AN226825</h3>
+            <button>500,000đ <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="products">
+            <img src="/public/img/ghi-5.jpeg" alt="Product 4">
+            <h3>GK. GỌNG CÀNG KIM LOẠI AN221415</h3>
+            <button>400,000đ <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="products">
+            <img src="/public/img/ghi-5.jpeg" alt="GK. GỌNG VIỀN NHỰA TITAN CAO CẤP">
+            <h3>GK. GỌNG VIỀN NHỰA TITAN CAO CẤP</h3>
+            <button>400,000đ <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="products">
+            <img src="/public/img/ghi-5.jpeg" alt="Product 2">
+            <h3>GK. GỌNG NHỰA CỨNG AN086</h3>
+            <button>800,000đ <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="products">
+            <img src="/public/img/ghi-5.jpeg" alt="Product 3">
+            <h3>GK. GỌNG CỐT KIM LOẠI AN226825</h3>
+            <button>550,000đ <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="products">
+            <img src="/public/img/ghi-5.jpeg" alt="Product 4">
+            <h3>GK. GỌNG CÀNG KIM LOẠI AN221415</h3>
+            <button>400,000đ<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+      <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/public/img/Sunny.png" alt="Anna Logo">
+                <p>Đăng kí để nhận tin mới nhất</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Để lại email của bạn">
+                    <button type="submit">
+                        <span>&#10148;</span>
+                    </button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61556331095513&mibextid=LQQJ4d"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@baolc05?_t=8rIjAAygdkO&_r=1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/_lcb.28th08/profilecard/?igsh=YjJnaGhxeDUzdDZy"><i
+                            class="fab fa-tiktok"></i></a>
+
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>SẢN PHẨM</h4>
+                    <ul>
+                        <li><a href="#">The Titan</a></li>
+                        <li><a href="#">Gọng Kính</a></li>
+                        <li><a href="#">Tròng Kính</a></li>
+                        <li><a href="#">Kính râm</a></li>
+                        <li><a href="#">Kính râm trẻ em</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>THÔNG TIN LIÊN HỆ</h4>
+                    <p>0338538293</p>
+                    <p><a href="mailto:thelight@gmail.com">thelight@gmai.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>CHÍNH SÁCH MUA HÀNG</h4>
+                    <ul>
+                        <li><a href="#">Hình thức thanh toán</a></li>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>THELIGHT © 2018 - 2023. Design by OKHUB Viet Nam</p>
+        </div>
+    </footer>
+  <script>
+    const basePrice = 1600000;
+    const quantityInput = document.getElementById("quantity");
+    const totalPriceElement = document.getElementById("total-price");
+    const modal = document.getElementById("success-modal");
+    const overlay = document.getElementById("overlay");
+
+    function updateTotalPrice() {
+      const quantity = parseInt(quantityInput.value);
+      const totalPrice = basePrice * quantity;
+      totalPriceElement.textContent = `${totalPrice.toLocaleString()}₫`;
+    }
+
+    document.getElementById("increase").addEventListener("click", function () {
+      quantityInput.value = parseInt(quantityInput.value) + 1;
+      updateTotalPrice();
+    });
+
+    document.getElementById("decrease").addEventListener("click", function () {
+      if (parseInt(quantityInput.value) > 1) {
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+        updateTotalPrice();
+      }
+    });
+
+    quantityInput.addEventListener("input", updateTotalPrice);
+
+    // Show modal on "Add to Cart" click
+    document.querySelector(".add-to-cart").addEventListener("click", function () {
+      modal.classList.add("active");
+      overlay.classList.add("active");
+
+      // Hide modal after 3 seconds
+      setTimeout(function () {
+        modal.classList.remove("active");
+        overlay.classList.remove("active");
+      }, 3000);
+    });
+  </script>
+  <script>
+    function toggleDescription() {
+      const description = document.getElementById("description");
+      const toggleIcon = document.getElementById("toggle-icon");
+
+      description.style.display = description.style.display === "none" || description.style.display === "" ? "block" : "none";
+      toggleIcon.classList.toggle("fa-plus");
+      toggleIcon.classList.toggle("fa-minus");
+    }
+  </script>
+
+  <!-- Font Awesome for icons (link to CDN or your local copy) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+    function changeImage(newSrc) {
+      const mainImage = document.getElementById("main-image");
+      mainImage.src = newSrc;
+    }
+  </script>
+   <script>
+        // JavaScript for Smooth Carousel Scrolling
+        let currentIndex = 0;
+        function moveCarousel(direction) {
+            const carousel = document.querySelector('.carousel');
+            const products = document.querySelectorAll('.product');
+            const productWidth = products[0].offsetWidth + 15; // product width + gap
+            const visibleItems = Math.floor(document.querySelector('.carousel-container').offsetWidth / productWidth);
+            const maxIndex = products.length - visibleItems;
+
+            // Update currentIndex and apply bounds
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = maxIndex;
+            } else if (currentIndex > maxIndex) {
+                currentIndex = 0;
+            }
+            // Move carousel by changing transform property
+            carousel.style.transform = `translateX(-${currentIndex * productWidth}px)`;
+        }
+        // JavaScript (optional, if you want to control the scrolling behavior) 
+        const scrollContainer = document.querySelector('.social-scroll');
+        const buttons = document.querySelectorAll('.social-item button');
+
+        // Function to stop the animation
+        function pauseScroll() {
+            scrollContainer.style.animationPlayState = 'paused';
+        }
+
+        // Function to resume the animation
+        function resumeScroll() {
+            scrollContainer.style.animationPlayState = 'running';
+        }
+
+        // Add event listeners to each button only
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', pauseScroll);  // Pause on button hover
+            button.addEventListener('mouseleave', resumeScroll); // Resume when leaving button
+        });
+
+
+    </script>
+</body>
+
+</html>

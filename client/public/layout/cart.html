@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="/public/css/css.css">
+    <title>Giỏ hàng</title>
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="/img/logo.png" alt="">
+        </div>
+        <div class="search">
+            <h4>Tìm Kiếm...</h4>
+            <img src="/img/search.png" alt="">
+        </div>
+        <div class="page-desk">
+            <h4>TRANG CHỦ</h4>
+            <h4>SẢN PHẨM</h4>
+            <h4>GIỚI THIỆU</h4>
+            <h4>LIÊN HỆ</h4>
+            <h4>BÀI VIẾT</h4>
+        </div>
+        <div class="page-mob">
+            <ul><img src="/img/burger-bar.png" alt="">
+                <div class="box">
+                    <li>
+                        <h4></h4>
+                    </li>
+                    <li>
+                        <h4>TRANG CHỦ</h4>
+                    </li>
+                    <li>
+                        <h4>SẢN PHẨM</h4>
+                    </li>
+                    <li>
+                        <h4>GIỚI THIỆU</h4>
+                    </li>
+                    <li>
+                        <h4>LIÊN HỆ</h4>
+                    </li>
+                    <li>
+                        <h4>BÀI VIẾT</h4>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div class="icon">
+            <div class="s-1"><img src="/img/search.png" alt=""></div>
+            <div class="cart"><img src="/img/shopping-cart.png" alt=""></div>
+            <div class="login"><img src="/img/user.png" alt=""></div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="breadcrumbs">Trang chủ / Giỏ hàng</div>
+
+        <div class="step-indicator">
+            <span>1</span> Giỏ hàng
+            <span class="active">2</span> Thanh toán
+            <span class="active">3</span> Hoàn thành
+        </div>
+
+
+
+
+
+
+
+        <div class="cart-container">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tạm tính</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            <div class="product">
+                                <img src="/img/anh8.webp" alt="Áo polo nam">
+                                <a href="#" class="product-name">Áo polo nam</a>
+                            </div>
+                        </td>
+                        <td class="price">299000</td>
+                        <td>
+                            <div class="quantity-control">
+                                <button onclick="updateQuantity(this, -1)">-</button>
+                                <input type="text" value="1" class="quantity" onchange="calculateSubtotal(this)">
+                                <button onclick="updateQuantity(this, 1)">+</button>
+                            </div>
+                        </td>
+                        <td class="subtotal">299000</td>
+                        <td><button class="remove-button"><i class="fa-solid fa-trash-can"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="summary">
+                <h3>Cộng giỏ hàng</h3>
+                <p>Tạm tính <span class="total">299000</span> ₫</p>
+                <p>Tổng <span class="total">299000</span> ₫</p>
+                <a href="#" class="checkout-button">Tiến hành thanh toán</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-container2">
+   
+   
+            <h4>Tóm tắt đơn hàng</h4>
+    
+            <!-- Order Item 1 -->
+            <div class="mob-cart">
+                <img class="img" src="/img/anh8.webp" alt="">
+                <p class="name">Áo polo nam</p>
+                <p class="price">299.000VNĐ</p>
+                <p class="price-down">399.000VNĐ</p>
+                <p class="descrip">áo phông nam basic dáng regular cổ tròn, có chi tiết đồ họa là điểm....</p>
+                <div class="quantity">
+                    <div class="quantity-control">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <input type="text" value="1" class="quantity" onchange="calculateSubtotal(this)">
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                </div>
+                <p class="delete">xóa sản phẩm</p>
+            </div>
+    
+            <!-- Order Item 2 -->
+            <div class="mob-cart">
+                <img class="img" src="/img/anh8.webp" alt="">
+                <p class="name">Áo polo nam</p>
+                <p class="price">299.000VNĐ</p>
+                <p class="price-down">399.000VNĐ</p>
+                <p class="descrip">áo phông nam basic dáng regular cổ tròn, có chi tiết đồ họa là điểm....</p>
+                <div class="quantity">
+                    <div class="quantity-control">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <input type="text" value="1" class="quantity" onchange="calculateSubtotal(this)">
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                </div>
+                <p class="delete">xóa sản phẩm</p>
+            </div>
+            <div class="total">
+                <div class="discount">
+                    <span>Thêm một phiếu giảm giá</span>
+                    <span>&#9660;</span>
+                </div>
+        
+                <div class="order-total">
+                    <span>Tạm tính</span>
+                    <span>598.000VNĐ</span>
+                </div>
+                <div class="order-total">
+                    <span>Giao hàng</span>
+                    <span>Miễn phí</span>
+                </div>
+                <div class="grand-total">
+                    <span>Tổng</span>
+                    <span>598.000VNĐ</span>
+                </div>
+            </div>
+    
+            
+        <button class="checkout-button">Thanh Toán</button>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="footer-section logo">
+            <img src="/img/2handstore (1).png" alt="AuraGlam Logo">
+        </div>
+        <div class="footer-section">
+            <h2>Trang</h2>
+            <ol>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Bài viết</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+            </ol>
+        </div>
+        <div class="footer-section">
+            <h2>Danh mục</h2>
+            <ol>
+                <li><a href="#">Đồ nam</a></li>
+                <li><a href="#">Đồ nữ</a></li>
+                <li><a href="#">Đồ unisex</a></li>
+                <li><a href="#">Đồ trẻ em</a></li>
+            </ol>
+        </div>
+        <div class="footer-section">
+            <h2>Thông Tin</h2>
+            <ol class="contact-info">
+                <li><i class="fa-solid fa-phone"></i> :0338538203</li>
+                <li><i class="fa-solid fa-envelope"></i>:2handstore.fpt@gmail.com</li>
+            </ol>
+            <h2>Theo Dõi</h2>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2016 - 2024 AURAGLAM S.p.A. - All rights reserved. SIAE LICENCE
+    </div>
+    <script>
+        function updateQuantity(button, change) {
+            const quantityInput = button.parentElement.querySelector('.quantity');
+            let quantity = parseInt(quantityInput.value);
+            quantity = isNaN(quantity) ? 1 : quantity + change;
+            if (quantity < 1) quantity = 1;
+            quantityInput.value = quantity;
+            calculateSubtotal(quantityInput);
+        }
+
+        function calculateSubtotal(quantityInput) {
+            const row = quantityInput.closest('tr');
+            const price = parseInt(row.querySelector('.price').textContent);
+            const quantity = parseInt(quantityInput.value);
+            const subtotal = price * quantity;
+            row.querySelector('.subtotal').textContent = subtotal;
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const subtotals = document.querySelectorAll('.subtotal');
+            let total = 0;
+            subtotals.forEach(sub => {
+                total += parseInt(sub.textContent);
+            });
+            document.querySelectorAll('.total').forEach(el => el.textContent = total);
+        }
+    </script>
+
+</body>

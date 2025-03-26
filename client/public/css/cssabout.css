@@ -1,0 +1,211 @@
+/* General styling for the blog section */
+.blog {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-blog {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+}
+
+.img-blog .img2 {
+    margin-top: 100px;
+}
+
+.blog h1 {
+    margin: auto;
+    text-align: center;
+}
+
+/* Blog container layout for sections */
+.blog1, .blog2 {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.blog1 h1, .blog2 h1 {
+    margin: auto;
+    text-align: center;
+}
+
+.blog2 .img3 {
+    width: 300%;
+}
+
+.blog2 .img3 img {
+    width: 100%;
+}
+
+.blog2 p {
+    width: 60%;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.fl-blog h1,
+.fl-blog h3 {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(44, 161, 144); 
+}
+
+/* Container of the slider */
+.slider {
+    margin-top: 70px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slide {
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    width: 20%; /* Increase the size of the image */
+    text-decoration: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 70%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom on hover or focus */
+.slide:focus img,
+.slide:hover img {
+    transform: scale(1.2); /* Zoom in the image by 1.2 times */
+}
+
+/* Remove default outline when image is clicked */
+.slide:focus {
+    outline: none;
+}
+
+.slide p {
+    font-size: 30px;
+    color: rgb(44, 161, 144);
+}
+
+/* Responsive Design for different screen sizes */
+@media (max-width: 1200px) {
+    /* Adjust blog section layout on large tablets */
+    .blog {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .blog1, .blog2 {
+        flex-direction: column;
+    }
+
+    .img-blog {
+        gap: 15px;
+    }
+
+    .blog2 .img3 {
+        width: 100%;
+    }
+
+    .slider {
+        gap: 15px;
+        justify-content: flex-start;
+    }
+
+    .slide {
+        width: 30%; /* Adjust slider images to fit better */
+    }
+}
+
+@media (max-width: 768px) {
+    /* For tablets and large mobile devices */
+    .blog {
+        width: 95%;
+    }
+
+    .img-blog {
+        gap: 10px;
+    }
+
+    .blog1, .blog2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .blog2 p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .slider {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .slide {
+        width: 70%; /* Adjust images to fit mobile screens */
+    }
+
+    .slide img {
+        height: auto;
+    }
+
+    .slide p {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile devices */
+    .blog {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .img-blog {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .blog1, .blog2 {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .blog2 p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .slider {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .slide {
+        width: 90%; /* Make slider images larger on mobile */
+    }
+
+    .slide p {
+        font-size: 20px; /* Adjust text size */
+    }
+
+    .slide img {
+        height: auto; /* Keep the aspect ratio on mobile */
+    }
+}

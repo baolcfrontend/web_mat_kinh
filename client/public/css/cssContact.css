@@ -1,0 +1,186 @@
+/* Body Background */
+body {
+    background: linear-gradient(180deg, #c4eff8, #4adff3); 
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper Container */
+.wrapper {
+    display: flex;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: flex-start;  /* Căn phần tử cách top */
+    height: 100vh;            /* Chiều cao toàn bộ màn hình */
+    width: 100%;
+    margin-top: 100px;
+}
+
+/* Contact Container */
+.contact-container {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.contact-container p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Input container */
+.input-container {
+    position: relative;
+    margin-bottom: 1.8rem;
+}
+
+.input-container input,
+.input-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: #f8f9fa;
+    outline: none;
+}
+
+.input-container label {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    font-size: 1rem;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Focus line for input */
+.input-focus-line {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, #3498db, #a322da);
+    transition: width 0.4s ease;
+}
+
+.input-container input:focus+label,
+.input-container input:not(:placeholder-shown)+label,
+.input-container textarea:focus+label,
+.input-container textarea:not(:placeholder-shown)+label {
+    top: -12px;
+    font-size: 0.85rem;
+    color: #3498db;
+}
+
+.input-container input:focus~.input-focus-line,
+.input-container textarea:focus~.input-focus-line {
+    width: 100%;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #3498db, #4462ad);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #8e44ad, #3498db);
+}
+
+/* Success Message */
+#successMessage {
+    color: #27ae60;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+
+/* Medium-sized devices (e.g., tablets) */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 2rem;
+    }
+.wrapper {
+        margin-top: 100px;
+    }
+    .contact-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-container p {
+        font-size: 0.9rem;
+    }
+
+    .input-container input,
+    .input-container textarea {
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.3rem;
+    }
+
+   
+}
+
+/* Small-sized devices (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .wrapper {
+        margin-top: 100px;
+    }
+
+    .contact-container {
+        padding: 1.5rem;
+    }
+
+    .contact-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .contact-container p {
+        font-size: 0.8rem;
+    }
+
+    .input-container input,
+    .input-container textarea {
+        padding: 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+}

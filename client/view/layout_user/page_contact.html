@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/client/public/css/cssHome.css">
+  <link rel="stylesheet" href="/client/public/css/cssContact.css">
+</head>
+
+<body>
+    <!-- Promotional Banner -->
+
+
+    <!-- Fixed Header -->
+ <header>
+        <!-- Logo -->
+        <a href="/client/index.html"> <img src="/public/img/Sunny.png" alt="Anna Logo" class="logo"></a>
+
+<div class="user-menu">
+    <ul><a href="/client/view/layout_user/product.html">Sản Phẩm</a></ul>
+    <ul class="user-dropdown">
+        <div class="dropdown-content">
+            <div class="dropdown-items">
+                <li class="dropdown-item">Gọng Kính</li>
+                <li>Tròng Kính</li>
+                <li>Kính Râm</li>
+                <li>Kính Trẻ Em</li>
+            </div>
+            <div class="dropdown-details">
+                <div>
+                    <strong>CHẤT LIỆU</strong>
+                    <p>Kim Loại</p>
+                    <p>Nhựa</p>
+                </div>
+                <div>
+                    <strong>HÌNH DÁNG</strong>
+                    <p>Mắt mèo</p>
+                    <p>Vuông</p>
+                </div>
+            </div>
+            <div class="dropdown-image">
+                <img src="/public/img/blog.png" alt="Dropdown Image">
+            </div>
+        </div>
+    </ul>
+</div>
+
+
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="keyword" autocomplete="off" placeholder="Tìm gọng kính, kính râm..." />
+            <i class="fas fa-search"></i>
+            <div id="result-list">
+                <ul>
+                    <!-- Kết quả tìm kiếm sẽ được thêm ở đây -->
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- Navigation -->
+        <nav>
+            <ul id="menu">
+                <li><a href="/client/view/layout_user/page_about.html">Giới Thiệu</a></li>
+                <li><a href="/client/view/layout_user/page_blog.html">Bài Viết</a></li>
+                <li><a href="/client/view/layout_user/page_contact.html">Liên Hệ</a></li>
+                <li><a href="/client/view/layout_user/user_login.html">Đăng Nhập</a></li>
+                <li><a href="/client/view/layout_user/user_register.html">Đăng Kí</a></li>
+                <li><a href="/client/view/layout_user/user_profile.html">Tài Khoản</a></li>
+
+            </ul>
+        </nav>
+        <div class="cart-container">
+            <a href="/client/view/layout_user/page_cart.html">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <span id="cart-count" class="cart-count">0</span>
+            <!-- Dropdown menu for cart -->
+            <div class="cart-dropdown" id="cart-dropdown">
+                <ul id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </ul>
+                <div class="cart-total">
+                    <span>Tổng Tiền: <strong id="cart-total">0</strong> VND</span>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="wrapper">
+        <div class="contact-container">
+            <h2>Liên Hệ Với Chúng Tôi</h2>
+            <p>Nếu bạn có bất kỳ câu hỏi nào, hãy để lại thông tin dưới đây để chúng tôi có thể hỗ trợ bạn.</p>
+            <form id="contactForm">
+                <div class="input-container">
+                    <input type="text" id="name" required>
+                    <label for="name">Họ và Tên</label>
+                    <span class="input-focus-line"></span>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                    <span class="input-focus-line"></span>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="subject" required>
+                    <label for="subject">Chủ Đề</label>
+                    <span class="input-focus-line"></span>
+                </div>
+                <div class="input-container">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Nội Dung Tin Nhắn</label>
+                    <span class="input-focus-line"></span>
+                </div>
+                <button type="submit" class="submit-btn">Gửi Tin Nhắn</button>
+                <p id="successMessage" class="hidden">Tin nhắn đã được gửi thành công! Cảm ơn bạn đã liên hệ với chúng
+                    tôi.</p>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/public/img/Sunny.png" alt="Anna Logo">
+                <p>Đăng kí để nhận tin mới nhất</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Để lại email của bạn">
+                    <button type="submit">
+                        <span>&#10148;</span>
+                    </button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61556331095513&mibextid=LQQJ4d"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@baolc05?_t=8rIjAAygdkO&_r=1"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/_lcb.28th08/profilecard/?igsh=YjJnaGhxeDUzdDZy"><i
+                            class="fab fa-tiktok"></i></a>
+
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>SẢN PHẨM</h4>
+                    <ul>
+                        <li><a href="#">The Titan</a></li>
+                        <li><a href="#">Gọng Kính</a></li>
+                        <li><a href="#">Tròng Kính</a></li>
+                        <li><a href="#">Kính râm</a></li>
+                        <li><a href="#">Kính râm trẻ em</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>THÔNG TIN LIÊN HỆ</h4>
+                    <p>0338538293</p>
+                    <p><a href="mailto:thelight@gmail.com">thelight@gmai.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>CHÍNH SÁCH MUA HÀNG</h4>
+                    <ul>
+                        <li><a href="#">Hình thức thanh toán</a></li>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>THELIGHT © 2018 - 2023. Design by OKHUB Viet Nam</p>
+        </div>
+    </footer>
+</body>
+</html>

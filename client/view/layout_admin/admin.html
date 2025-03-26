@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/client/public/assets/css/block.css">
+    <link rel="stylesheet" href="/client/public/assets/css/layout.css">
+
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>Quản lý</h1>
+                <a href="/client/view/layout_admin/admin.html"><img style="filter: brightness(500%);"
+                        src="/client/public/img/Sunny.png" alt="Logo" width="100px 100px"></a>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="/client/view/layout_admin/admin.html"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                <li><a href="/client/view/layout_admin/admin_user.html"><i class="fa-solid fa-user"></i> Người dùng</a></li>
+                <li><a href="/client/view/layout_admin/admin_category.html"><i class="fa-solid fa-list"></i> Danh mục</a></li>
+                <li><a href="/client/view/layout_admin/admin_product.html"><i class="fa-brands fa-product-hunt"></i> Sản
+                        phẩm</a></li>
+                <li><a href="/client/view/layout_admin/admin_cart.html"><i class="fa-solid fa-truck-fast"></i> Đơn hàng</a>
+                </li>
+                <li><a href="/client/view/layout_admin/admin_blog.html"><i class="fa-solid fa-blog"></i> Bài viết</a></li>
+                <li><a href="/client/view/layout_admin/admin_comment.html"><i class="fa-solid fa-comment"></i> Đánh giá</a>
+                </li>
+                <li><a href="/client/index.html"><i class="fa-solid fa-rotate-left"></i> Quay về trang web</a></li>
+            </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content" id="body">
+
+            <!-- main -->
+            <div class="main">
+                <div class="topbar">
+                    <div class="toggle">
+
+                    </div>
+                    <div class="search">
+                        <label>
+                            <input type="text" placeholder="Search here" />
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </div>
+                    <div class="user">
+                        <img src="/client/public/img/Sunny.png" />
+                    </div>
+                </div>
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="numbersuser"></div>
+                            <div class="cardName">Người dùng</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numberspro"></div>
+                            <div class="cardName">Sản phẩm</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numbers">33</div>
+                            <div class="cardName">Đánh Giá</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numbersorders">100 đ</div>
+                            <div class="cardName">Đơn hàng</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numbersday">đ</div>
+                            <div class="cardName">Danh thu ngày</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numbersweek">100đ</div>
+                            <div class="cardName">Tổng danh tuần</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numbersmonth">100đ</div>
+                            <div class="cardName">Danh thu tháng</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <div class="numbersyear">VNĐ</div>
+                            <div class="cardName">Tổng danh năm</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="graphBox">
+                    <div class="box">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="box">
+                        <canvas id="earning"></canvas>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="recentOrders">
+                        <div class="cardHeader">
+                            <h2>Đơn đặt hàng gần đây</h2>
+                            <a href="#" class="btn">Xem tất cả</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Tên</td>
+                                    <td>Giá</td>
+                                    <td>Thanh toán</td>
+                                    <td>Trạng thái</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="recentCustomers">
+                        <div class="cardHeader">
+                            <h2>Khách hàng gần đây</h2>
+                        </div>
+                        <table>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="/client/public/img/anh8.jpg" /></div>
+                                </td>
+                                <td>
+                                    <h4>Bảolol<br /><span>Italy</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="/client/public/img/anh9.jpg" /></div>
+                                </td>
+                                <td>
+                                    <h4>Bảolol<br /><span>India</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="/client/public/img/anhdep.jpg" /></div>
+                                </td>
+                                <td>
+                                    <h4>Bảolol<br /><span>France</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="/client/public/img/bannipham.png" /></div>
+                                </td>
+                                <td>
+                                    <h4>Bảolol<br /><span>USA</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="/client/public/img/khanhhuyenh.jpeg" /></div>
+                                </td>
+                                <td>
+                                    <h4>Bảolol<br /><span>Japan</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="/client/public/img/vanh.jpeg" /></div>
+                                </td>
+                                <td>
+                                    <h4>Bảolol<br /><span>India</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="/client/public/img/img-login.jpeg" /></div>
+                                </td>
+                                <td>
+                                    <h4>Bảolol<br /><span>Malaysia</span></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="imgBx"><img src="/client/public/img/img-register.jpeg" /></div>
+                                </td>
+                                <td>
+                                    <h4>Bảolol<br /><span>India</span></h4>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+<script>
+    let toggle = document.querySelector(".toggle");
+    let navigation = document.querySelector(".navigation");
+    let main = document.querySelector(".main");
+
+    toggle.onclick = function () {
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+    };
+    let list = document.querySelectorAll(".navigation li");
+    function activeLink() {
+        list.forEach((item) => item.classList.remove("hovered"));
+        this.classList.add("hovered");
+    }
+    list.forEach((item) => item.addEventListener("mouseover", activeLink));
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script type="module" src="/admin.js"></script>

@@ -1,0 +1,199 @@
+/* Checkout Layout */
+.checkout-content {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+    justify-content: space-between; /* Ensures proper spacing on larger screens */
+}
+
+.checkout-content .billing-address {
+    width: 50%;
+    padding: 10px;
+    margin-left: 400px;
+}
+
+.order-summary {
+    width: 50%;
+    margin-right: 400px;
+}
+
+.billing-address h2,
+.order-summary h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Form Inputs */
+form input[type="text"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #2294ab;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form label input[type="checkbox"] {
+    margin-right: 1px;
+    margin-top: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #22b4aa;
+    color: black;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Order Summary */
+.order-summary {
+    width: 50%;
+}
+
+.order-summary .order-item,
+.order-summary .order-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.order-summary .grand-total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.order-summary label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.order-summary p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 15px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+    font-size: 25px;
+}
+
+.breadcrumbs p {
+    color: #B17457;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+    /* Adjust layout for tablet screens */
+    .checkout-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-content .billing-address,
+    .order-summary {
+        width: 80%; /* Adjust width for better fit on tablet */
+        margin: 0;
+    }
+
+    .billing-address h2,
+    .order-summary h2 {
+        font-size: 20px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+    }
+
+    .order-summary p {
+        font-size: 12px;
+    }
+
+    .breadcrumbs {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust layout for mobile screens */
+    .checkout-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-content .billing-address,
+    .order-summary {
+        width: 90%; /* Make sections take up more space on mobile */
+        margin: 0;
+    }
+
+    .billing-address h2,
+    .order-summary h2 {
+        font-size: 18px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
+
+    .order-summary p {
+        font-size: 12px;
+    }
+
+    .breadcrumbs {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust layout for very small screens */
+    .checkout-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-content .billing-address,
+    .order-summary {
+        width: 100%; /* Full width for smaller screens */
+        margin: 0;
+    }
+
+    .billing-address h2,
+    .order-summary h2 {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .order-summary p {
+        font-size: 12px;
+    }
+
+    .breadcrumbs {
+        font-size: 16px;
+    }
+}
