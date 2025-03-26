@@ -1,0 +1,363 @@
+/* Container to hold sidebar and product list */
+.container {
+    display: inline-flex;
+    padding: 20px;
+    gap: 20px;
+    align-items: flex-start; /* Đảm bảo các item không bị kéo giãn */
+    /* Added gap between sidebar and product list */
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* Group the checkboxes with spacing */
+.checkbox-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Product list styles */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+   flex: 1;
+    width: 100%;
+    top: 30px;
+}
+
+/* Styling for each product */
+.products {
+  height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+    justify-content: space-between;
+   margin-bottom: 0px;
+}
+
+/* Ensure the product images maintain aspect ratio */
+.products img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Maintain aspect ratio without distortion */
+}
+
+/* Hover effect for images */
+.products img:hover {
+    transform: scale(1.1);
+}
+
+/* Product name and price */
+.products h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 12px 0;
+    line-height: 1.4;
+    text-align: center;
+    flex-grow: 1; /* Allow name to grow within container */
+}
+
+/* Button styles */
+.products button {
+    background-color: #45c0b5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  width: 100%;
+}
+
+.products button:hover {
+    background-color: #c67709;
+    transition: background-color 0.3s;
+    transform: scale(1.2);
+}
+
+.products button i {
+    margin-left: 7px;
+    transition: transform 0.2s;
+}
+
+.products button:hover i {
+    transform: translate(30px);
+}
+
+/* Hide the extended color options initially */
+.more-options {
+    display: none;
+}
+
+.more-options label {
+    display: block;
+    margin-top: 7px;
+}
+
+/* Button style for "Xem Thêm" */
+#toggleMore {
+    background: none;
+    color: #007bff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block; /* Ensure it doesn't overlap other elements */
+    width: 30%;  /* Adjust for mobile-friendly width */
+   margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    /* Adjust the sidebar width and padding */
+    .sidebar {
+        width: 200px;
+    }
+
+    .product-list {
+        gap: 15px;
+    }
+
+    /* Make the products display in 3 columns on tablets */
+    .products {
+        flex: 1 1 calc(33.33% - 50px);
+        max-width: calc(33.33% - 50px);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust layout for smaller screens */
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .sidebar {
+    display: none; /* Ensure some space after sidebar */
+    }
+
+    .product-list {
+        gap: 15px;
+    }
+
+    /* Display 2 products per row on smaller tablets */
+    .products {
+        flex: 1 1 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+
+    /* Ensure the button stays aligned and centered */
+    #toggleMore {
+        margin-top: 15px;
+    }
+}
+
+/* For iPhone 14 or smaller screens */
+@media (max-width: 480px) {
+    /* Adjust layout for very small screens (mobile phones) */
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+    }
+
+    .sidebar {
+       display: none;/* Space between sidebar and products */
+    }
+
+    .product-list {
+        gap: 10px;
+    }
+
+    /* Display 1 product per row on mobile devices */
+    .products {
+        flex: 1 1 calc(100% - 10px);
+        max-width: calc(100% - 10px);
+    }
+
+    /* Reduce button size on mobile for better visibility */
+    .products button {
+        font-size: 14px;
+        width: 80%;
+    }
+
+    .products h3 {
+        font-size: 14px;
+    }
+
+    /* Prevent image distortion or excessive scaling */
+    .products img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+.shop-sort-by{
+
+    position: absolute;
+    right: 44px;
+    margin-top: -10px;
+}
+.shop-sort-by label {
+    margin: 0;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1rem;
+    
+}
+
+ .shop-sort-by select {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    box-shadow: 0;
+    padding: 0 20px 0 10px;
+    border: 1px solid #DbDbDb;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.content-product {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e04a4a;
+}
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 190%;
+
+}
+
+.pagination button {
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    color: #666;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Nút active (trang hiện tại) */
+.pagination button.active {
+    background-color: #ff4757;
+    color: white;
+    border-color: #ff4757;
+    pointer-events: none;
+}
+
+/* Hiệu ứng hover mềm mại */
+.pagination button:not(:disabled):hover {
+    transform: scale(1.1);
+}
+/* Nút active (trang hiện tại) */
+.pagination button.active {
+    background-color: #ff4757;
+    color: white;
+    border-color: #ff4757;
+    pointer-events: none;
+    
+}
+
+/* Nút bị vô hiệu hóa */
+.pagination button:disabled {
+    background-color: #ccc;
+    color: #666;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Hiệu ứng hover mềm mại */
+.pagination button:not(:disabled):hover {
+    transform: scale(1.05);
+}
+
+/* Định dạng danh sách số trang */
+.pagination span.page-numbers .page-btn {
+    display: flex;
+    column-gap: normal;
+    gap: 8px;
+    justify-content: center;
+    
+}
+
+.pagination .page-numbers button {
+    min-width: 40px;
+    text-align: center;
+}
